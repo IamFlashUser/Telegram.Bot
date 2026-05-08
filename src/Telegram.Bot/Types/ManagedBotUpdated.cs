@@ -1,7 +1,7 @@
 // GENERATED FILE - DO NOT MODIFY MANUALLY
 namespace Telegram.Bot.Types;
 
-/// <summary>This object contains information about the creation or token update of a bot that is managed by the current bot.</summary>
+/// <summary>This object contains information about the creation, token update, or owner update of a bot that is managed by the current bot.</summary>
 public partial class ManagedBotUpdated
 {
     /// <summary>User that created the bot</summary>

@@ -1,7 +1,7 @@
 // GENERATED FILE - DO NOT MODIFY MANUALLY
 namespace Telegram.Bot.Requests;
 
-/// <summary>Use this method to stream a partial message to a user while the message is being generated.</summary>
+/// <summary>Use this method to stream a partial message to a user while the message is being generated. Note that the streamed draft is ephemeral and acts as a temporary 30-second preview - once the output is finalized, you <b>must</b> call <see cref="TelegramBotClientExtensions.SendMessage">SendMessage</see> with the complete message to persist it in the user's chat.</summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class SendMessageDraftRequest() : RequestBase<bool>("sendMessageDraft"), IChatTargetable
 {
@@ -10,7 +10,7 @@ public partial class SendMessageDraftRequest() : RequestBase<bool>("sendMessageD
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required long ChatId { get; set; }
 
-    /// <summary>Unique identifier of the message draft; must be non-zero. Changes of drafts with the same identifier are animated</summary>
+    /// <summary>Unique identifier of the message draft; must be non-zero. Changes of drafts with the same identifier are animated.</summary>
     [JsonPropertyName("draft_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int DraftId { get; set; }

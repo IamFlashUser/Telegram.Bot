@@ -14,7 +14,7 @@ public partial class SendGiftRequest() : RequestBase<bool>("sendGift")
     [JsonPropertyName("user_id")]
     public long? UserId { get; set; }
 
-    /// <summary>Required if <see cref="UserId">UserId</see> is not specified. Unique identifier for the chat or username of the channel (in the format <c>@channelusername</c>) that will receive the gift.</summary>
+    /// <summary>Required if <see cref="UserId">UserId</see> is not specified. Unique identifier for the chat or username of the channel (in the format <c>@username</c>) that will receive the gift.</summary>
     [JsonPropertyName("chat_id")]
     public ChatId? ChatId { get; set; }
 

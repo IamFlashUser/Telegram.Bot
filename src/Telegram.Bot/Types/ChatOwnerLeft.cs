@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types;
 /// <summary>Describes a service message about the chat owner leaving the chat.</summary>
 public partial class ChatOwnerLeft
 {
-    /// <summary><em>Optional</em>. The user which will be the new owner of the chat if the previous owner does not return to the chat</summary>
+    /// <summary><em>Optional</em>. The user who will become the new owner of the chat if the previous owner does not return to the chat</summary>
     [JsonPropertyName("new_owner")]
     public User? NewOwner { get; set; }
 

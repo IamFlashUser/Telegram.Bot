@@ -1,7 +1,7 @@
 // GENERATED FILE - DO NOT MODIFY MANUALLY
 namespace Telegram.Bot.Types;
 
-/// <summary>This <a href="https://core.telegram.org/bots/api#available-types">object</a> represents an incoming update.<br/>At most <b>one</b> of the optional parameters can be present in any given update.</summary>
+/// <summary>This <a href="https://core.telegram.org/bots/api#available-types">object</a> represents an incoming update.<br/>At most <b>one</b> of the optional fields can be present in any given update.</summary>
 public partial class Update
 {
     /// <summary>The update's unique identifier. Update identifiers start from a certain positive number and increase sequentially. This identifier becomes especially handy if you're using <see cref="TelegramBotClientExtensions.SetWebhook">webhooks</see>, since it allows you to ignore repeated updates or to restore the correct update sequence, should they get out of order. If there are no new updates for at least a week, then identifier of the next update will be chosen randomly instead of sequentially.</summary>
@@ -99,7 +99,7 @@ public partial class Update
     [JsonPropertyName("removed_chat_boost")]
     public ChatBoostRemoved? RemovedChatBoost { get; set; }
 
-    /// <summary><em>Optional</em>. A new bot was created to be managed by the bot or token of a bot was changed</summary>
+    /// <summary><em>Optional</em>. A new bot was created to be managed by the bot, or token or owner of a managed bot was changed</summary>
     [JsonPropertyName("managed_bot")]
     public ManagedBotUpdated? ManagedBot { get; set; }
 

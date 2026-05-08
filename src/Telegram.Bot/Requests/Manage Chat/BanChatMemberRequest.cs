@@ -5,7 +5,7 @@ namespace Telegram.Bot.Requests;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class BanChatMemberRequest() : RequestBase<bool>("banChatMember"), IChatTargetable, IUserTargetable
 {
-    /// <summary>Unique identifier for the target group or username of the target supergroup or channel (in the format <c>@channelusername</c>)</summary>
+    /// <summary>Unique identifier for the target group or username of the target supergroup or channel in the format <c>@username</c></summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }

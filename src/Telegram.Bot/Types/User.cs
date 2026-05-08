@@ -48,7 +48,7 @@ public partial class User
     [JsonPropertyName("supports_inline_queries")]
     public bool SupportsInlineQueries { get; set; }
 
-    /// <summary><em>Optional</em>. <see langword="true"/>, if the bot can be connected to a Telegram Business account to receive its messages. Returned only in <see cref="TelegramBotClientExtensions.GetMe">GetMe</see>.</summary>
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the bot can be connected to a user account to manage it. Returned only in <see cref="TelegramBotClientExtensions.GetMe">GetMe</see>.</summary>
     [JsonPropertyName("can_connect_to_business")]
     public bool CanConnectToBusiness { get; set; }
 

@@ -5,7 +5,7 @@ namespace Telegram.Bot.Requests;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class SendPaidMediaRequest() : FileRequestBase<Message>("sendPaidMedia"), IChatTargetable, IBusinessConnectable
 {
-    /// <summary>Unique identifier for the target chat or username of the target channel (in the format <c>@channelusername</c>). If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance.</summary>
+    /// <summary>Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>. If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance.</summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
@@ -57,7 +57,7 @@ public partial class SendPaidMediaRequest() : FileRequestBase<Message>("sendPaid
     [JsonPropertyName("protect_content")]
     public bool ProtectContent { get; set; }
 
-    /// <summary>Pass <see langword="true"/> to allow up to 1000 messages per second, ignoring <a href="https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">broadcasting limits</a> for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance</summary>
+    /// <summary>Pass <see langword="true"/> to allow up to 1000 messages per second, ignoring <a href="https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">broadcasting limits</a> for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.</summary>
     [JsonPropertyName("allow_paid_broadcast")]
     public bool AllowPaidBroadcast { get; set; }
 

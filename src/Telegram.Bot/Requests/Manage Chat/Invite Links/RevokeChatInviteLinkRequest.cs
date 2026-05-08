@@ -5,7 +5,7 @@ namespace Telegram.Bot.Requests;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class RevokeChatInviteLinkRequest() : RequestBase<ChatInviteLink>("revokeChatInviteLink"), IChatTargetable
 {
-    /// <summary>Unique identifier of the target chat or username of the target channel (in the format <c>@channelusername</c>)</summary>
+    /// <summary>Unique identifier of the target chat or username of the target channel in the format <c>@username</c></summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }

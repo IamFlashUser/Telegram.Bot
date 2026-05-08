@@ -1,11 +1,11 @@
 // GENERATED FILE - DO NOT MODIFY MANUALLY
 namespace Telegram.Bot.Requests;
 
-/// <summary>Use this method to send a group of photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type.<para>Returns: An array of <see cref="Message"/> objects that were sent is returned.</para></summary>
+/// <summary>Use this method to send a group of photos, live photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type.<para>Returns: An array of <see cref="Message"/> objects that were sent is returned.</para></summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class SendMediaGroupRequest() : FileRequestBase<Message[]>("sendMediaGroup"), IChatTargetable, IBusinessConnectable
 {
-    /// <summary>Unique identifier for the target chat or username of the target channel (in the format <c>@channelusername</c>)</summary>
+    /// <summary>Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
@@ -34,7 +34,7 @@ public partial class SendMediaGroupRequest() : FileRequestBase<Message[]>("sendM
     [JsonPropertyName("protect_content")]
     public bool ProtectContent { get; set; }
 
-    /// <summary>Pass <see langword="true"/> to allow up to 1000 messages per second, ignoring <a href="https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">broadcasting limits</a> for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance</summary>
+    /// <summary>Pass <see langword="true"/> to allow up to 1000 messages per second, ignoring <a href="https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">broadcasting limits</a> for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.</summary>
     [JsonPropertyName("allow_paid_broadcast")]
     public bool AllowPaidBroadcast { get; set; }
 

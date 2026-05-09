@@ -45,6 +45,14 @@ public partial class Poll
     [JsonPropertyName("allows_revoting")]
     public bool AllowsRevoting { get; set; }
 
+    /// <summary><see langword="true"/> if voting is limited to users who have been members of the chat where the poll was originally sent for more than 24 hours</summary>
+    [JsonPropertyName("members_only")]
+    public bool MembersOnly { get; set; }
+
+    /// <summary><em>Optional</em>. A list of two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country codes indicating the countries from which users can vote in the poll. If omitted, then users from any country can participate in the poll.</summary>
+    [JsonPropertyName("country_codes")]
+    public string[]? CountryCodes { get; set; }
+
     /// <summary><em>Optional</em>. Array of 0-based identifiers of the correct answer options. Available only for polls in quiz mode which are closed or were sent (not forwarded) by the bot or to the private chat with the bot.</summary>
     [JsonPropertyName("correct_option_ids")]
     public int[]? CorrectOptionIds { get; set; }
@@ -55,6 +63,10 @@ public partial class Poll
     /// <summary><em>Optional</em>. Special entities like usernames, URLs, bot commands, etc. that appear in the <see cref="Explanation">Explanation</see></summary>
     [JsonPropertyName("explanation_entities")]
     public MessageEntity[]? ExplanationEntities { get; set; }
+
+    /// <summary><em>Optional</em>. Media added to the quiz explanation</summary>
+    [JsonPropertyName("explanation_media")]
+    public PollMedia? ExplanationMedia { get; set; }
 
     /// <summary><em>Optional</em>. Amount of time in seconds the poll will be active after creation</summary>
     [JsonPropertyName("open_period")]
@@ -71,4 +83,7 @@ public partial class Poll
     /// <summary><em>Optional</em>. Special entities like usernames, URLs, bot commands, etc. that appear in the description</summary>
     [JsonPropertyName("description_entities")]
     public MessageEntity[]? DescriptionEntities { get; set; }
+
+    /// <summary><em>Optional</em>. Media added to the poll description; for polls inside the <see cref="Message"/> object only</summary>
+    public PollMedia? Media { get; set; }
 }

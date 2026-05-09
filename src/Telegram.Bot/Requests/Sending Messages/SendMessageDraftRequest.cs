@@ -15,13 +15,12 @@ public partial class SendMessageDraftRequest() : RequestBase<bool>("sendMessageD
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int DraftId { get; set; }
 
-    /// <summary>Text of the message to be sent, 1-4096 characters after entities parsing</summary>
-    [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
-    public required string Text { get; set; }
-
     /// <summary>Unique identifier for the target message thread</summary>
     [JsonPropertyName("message_thread_id")]
     public int? MessageThreadId { get; set; }
+
+    /// <summary>Text of the message to be sent, 0-4096 characters after entities parsing. Pass an empty text to show a “Thinking…” placeholder.</summary>
+    public string? Text { get; set; }
 
     /// <summary>Mode for parsing entities in the message text. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</summary>
     [JsonPropertyName("parse_mode")]

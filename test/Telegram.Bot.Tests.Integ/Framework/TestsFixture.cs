@@ -263,11 +263,10 @@ public class TestsFixture : IDisposable
         if (allowedUserNames.Length != 0) return allowedUserNames;
 
         // Assume all chat admins are allowed testers
-        var admins = await BotClient.GetChatAdministrators(SupergroupChat, cancellationToken);
-        allowedUserNames = admins
+        var admins = await BotClient.GetChatAdministrators(SupergroupChat, false, cancellationToken);
+        allowedUserNames = [.. admins
             .Where(member => !member.User.IsBot)
-            .Select(member => member.User.Username)
-            .ToArray();
+            .Select(member => member.User.Username)];
 
         return allowedUserNames;
     }

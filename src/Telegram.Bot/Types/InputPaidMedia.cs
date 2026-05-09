@@ -1,9 +1,10 @@
 // GENERATED FILE - DO NOT MODIFY MANUALLY
 namespace Telegram.Bot.Types;
 
-/// <summary>This object describes the paid media to be sent. Currently, it can be one of<br/><see cref="InputPaidMediaPhoto"/>, <see cref="InputPaidMediaVideo"/></summary>
+/// <summary>This object describes the paid media to be sent. Currently, it can be one of<br/><see cref="InputPaidMediaLivePhoto"/>, <see cref="InputPaidMediaPhoto"/>, <see cref="InputPaidMediaVideo"/></summary>
 [JsonConverter(typeof(PolymorphicJsonConverter<InputPaidMedia>))]
 [CustomJsonPolymorphic("type")]
+[CustomJsonDerivedType(typeof(InputPaidMediaLivePhoto), "live_photo")]
 [CustomJsonDerivedType(typeof(InputPaidMediaPhoto), "photo")]
 [CustomJsonDerivedType(typeof(InputPaidMediaVideo), "video")]
 public abstract partial class InputPaidMedia
@@ -15,6 +16,17 @@ public abstract partial class InputPaidMedia
     /// <summary>File to send. Pass a FileId to send a file that exists on the Telegram servers (recommended), pass an HTTP URL for Telegram to get a file from the Internet, or use <see cref="InputFileStream(Stream, string?)"/> with a specific filename. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a></summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public InputFile Media { get; set; } = default!;
+}
+
+/// <summary>The paid media to send is a live photo.</summary>
+public partial class InputPaidMediaLivePhoto : InputPaidMedia
+{
+    /// <summary>Type of the media, always <see cref="InputPaidMediaType.LivePhoto"/></summary>
+    public override InputPaidMediaType Type => InputPaidMediaType.LivePhoto;
+
+    /// <summary>The static photo to send. Pass a FileId to send a file that exists on the Telegram servers (recommended) or use <see cref="InputFileStream(Stream, string?)"/> with a specific filename. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a>. Sending live photos by a URL is currently unsupported.</summary>
+    [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
+    public InputFile Photo { get; set; } = default!;
 }
 
 /// <summary>The paid media to send is a photo.</summary>

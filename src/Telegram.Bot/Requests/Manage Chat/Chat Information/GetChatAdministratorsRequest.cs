@@ -1,7 +1,7 @@
 // GENERATED FILE - DO NOT MODIFY MANUALLY
 namespace Telegram.Bot.Requests;
 
-/// <summary>Use this method to get a list of administrators in a chat, which aren't bots.<para>Returns: An Array of <see cref="ChatMember"/> objects.</para></summary>
+/// <summary>Use this method to get a list of administrators in a chat.<para>Returns: An Array of <see cref="ChatMember"/> objects.</para></summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class GetChatAdministratorsRequest() : RequestBase<ChatMember[]>("getChatAdministrators"), IChatTargetable
 {
@@ -9,4 +9,8 @@ public partial class GetChatAdministratorsRequest() : RequestBase<ChatMember[]>(
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
+
+    /// <summary>Pass <see langword="true"/> to additionally receive all bots that are administrators of the chat. By default, bots other than the current bot are omitted.</summary>
+    [JsonPropertyName("return_bots")]
+    public bool ReturnBots { get; set; }
 }

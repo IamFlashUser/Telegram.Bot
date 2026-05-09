@@ -16,6 +16,9 @@ public partial class InputPollOption
     [JsonPropertyName("text_entities")]
     public MessageEntity[]? TextEntities { get; set; }
 
+    /// <summary><em>Optional</em>. Media added to the poll option</summary>
+    public InputPollOptionMedia? Media { get; set; }
+
     /// <summary>Initializes an instance of <see cref="InputPollOption"/></summary>
     /// <param name="text">Option text, 1-100 characters</param>
     [SetsRequiredMembers]

@@ -41,6 +41,10 @@ public partial class Message
     [JsonConverter(typeof(UnixDateTimeConverter))]
     public DateTime Date { get; set; }
 
+    /// <summary><em>Optional</em>. The unique identifier for the guest query. Use this identifier with the method <see cref="TelegramBotClientExtensions.AnswerGuestQuery">AnswerGuestQuery</see> to send a response message. If non-empty, the message belongs to the chat where the guest bot was summoned, which may not coincide with other existing bot chats sharing the same identifier.</summary>
+    [JsonPropertyName("guest_query_id")]
+    public string? GuestQueryId { get; set; }
+
     /// <summary><em>Optional</em>. Unique identifier of the business connection from which the message was received. If non-empty, the message belongs to a chat of the corresponding business account that is independent from any potential bot chat which might share the same identifier.</summary>
     [JsonPropertyName("business_connection_id")]
     public string? BusinessConnectionId { get; set; }
@@ -87,6 +91,14 @@ public partial class Message
     /// <summary><em>Optional</em>. Bot through which the message was sent</summary>
     [JsonPropertyName("via_bot")]
     public User? ViaBot { get; set; }
+
+    /// <summary><em>Optional</em>. For a message sent by a guest bot, this is the user whose original message triggered the bot's response</summary>
+    [JsonPropertyName("guest_bot_caller_user")]
+    public User? GuestBotCallerUser { get; set; }
+
+    /// <summary><em>Optional</em>. For a message sent by a guest bot, this is the chat whose original message triggered the bot's response</summary>
+    [JsonPropertyName("guest_bot_caller_chat")]
+    public Chat? GuestBotCallerChat { get; set; }
 
     /// <summary><em>Optional</em>. Date the message was last edited</summary>
     [JsonPropertyName("edit_date")]
@@ -143,6 +155,10 @@ public partial class Message
 
     /// <summary><em>Optional</em>. Message is a general file, information about the file</summary>
     public Document? Document { get; set; }
+
+    /// <summary><em>Optional</em>. Message is a live photo, information about the live photo. For backward compatibility, when this field is set, the <see cref="Photo">Photo</see> field will also be set</summary>
+    [JsonPropertyName("live_photo")]
+    public LivePhoto? LivePhoto { get; set; }
 
     /// <summary><em>Optional</em>. Message contains paid media; information about the paid media</summary>
     [JsonPropertyName("paid_media")]
@@ -433,6 +449,7 @@ public partial class Message
         { Animation: not null }                         => MessageType.Animation,
         { Audio: not null }                             => MessageType.Audio,
         { Document: not null }                          => MessageType.Document,
+        { LivePhoto: not null }                         => MessageType.LivePhoto,
         { PaidMedia: not null }                         => MessageType.PaidMedia,
         { Photo: not null }                             => MessageType.Photo,
         { Sticker: not null }                           => MessageType.Sticker,

@@ -40,6 +40,10 @@ public partial class Update
     [JsonPropertyName("deleted_business_messages")]
     public BusinessMessagesDeleted? DeletedBusinessMessages { get; set; }
 
+    /// <summary><em>Optional</em>. New guest message. The bot can use the field <em>Message.GuestQueryId</em> and the method <see cref="TelegramBotClientExtensions.AnswerGuestQuery">AnswerGuestQuery</see> to send a message in response.</summary>
+    [JsonPropertyName("guest_message")]
+    public Message? GuestMessage { get; set; }
+
     /// <summary><em>Optional</em>. A reaction to a message was changed by a user. The bot must be an administrator in the chat and must explicitly specify <c>"<see cref="MessageReaction">MessageReaction</see>"</c> in the list of <em>AllowedUpdates</em> to receive these updates. The update isn't received for reactions set by bots.</summary>
     [JsonPropertyName("message_reaction")]
     public MessageReactionUpdated? MessageReaction { get; set; }
@@ -116,6 +120,7 @@ public partial class Update
         { BusinessMessage: not null }         => UpdateType.BusinessMessage,
         { EditedBusinessMessage: not null }   => UpdateType.EditedBusinessMessage,
         { DeletedBusinessMessages: not null } => UpdateType.DeletedBusinessMessages,
+        { GuestMessage: not null }            => UpdateType.GuestMessage,
         { MessageReaction: not null }         => UpdateType.MessageReaction,
         { MessageReactionCount: not null }    => UpdateType.MessageReactionCount,
         { InlineQuery: not null }             => UpdateType.InlineQuery,
@@ -137,5 +142,5 @@ public partial class Update
 
     /// <summary>All UpdateTypes, for use with <see cref="TelegramBotClientExtensions.GetUpdates">GetUpdates</see></summary>
     public static readonly UpdateType[] AllTypes =
-        [UpdateType.Message, UpdateType.EditedMessage, UpdateType.ChannelPost, UpdateType.EditedChannelPost, UpdateType.BusinessConnection, UpdateType.BusinessMessage, UpdateType.EditedBusinessMessage, UpdateType.DeletedBusinessMessages, UpdateType.MessageReaction, UpdateType.MessageReactionCount, UpdateType.InlineQuery, UpdateType.ChosenInlineResult, UpdateType.CallbackQuery, UpdateType.ShippingQuery, UpdateType.PreCheckoutQuery, UpdateType.PurchasedPaidMedia, UpdateType.Poll, UpdateType.PollAnswer, UpdateType.MyChatMember, UpdateType.ChatMember, UpdateType.ChatJoinRequest, UpdateType.ChatBoost, UpdateType.RemovedChatBoost, UpdateType.ManagedBot];
+        [UpdateType.Message, UpdateType.EditedMessage, UpdateType.ChannelPost, UpdateType.EditedChannelPost, UpdateType.BusinessConnection, UpdateType.BusinessMessage, UpdateType.EditedBusinessMessage, UpdateType.DeletedBusinessMessages, UpdateType.GuestMessage, UpdateType.MessageReaction, UpdateType.MessageReactionCount, UpdateType.InlineQuery, UpdateType.ChosenInlineResult, UpdateType.CallbackQuery, UpdateType.ShippingQuery, UpdateType.PreCheckoutQuery, UpdateType.PurchasedPaidMedia, UpdateType.Poll, UpdateType.PollAnswer, UpdateType.MyChatMember, UpdateType.ChatMember, UpdateType.ChatJoinRequest, UpdateType.ChatBoost, UpdateType.RemovedChatBoost, UpdateType.ManagedBot];
 }

@@ -15,4 +15,12 @@ public enum InputMediaType
     Audio,
     /// <summary>Represents a general file to be sent.<br/><br/><i>(<see cref="InputMedia"/> can be cast into <see cref="InputMediaDocument"/>)</i></summary>
     Document,
+    /// <summary>Represents a live photo to be sent.<br/><br/><i>(<see cref="InputMedia"/> can be cast into <see cref="InputMediaLivePhoto"/>)</i></summary>
+    LivePhoto,
+    /// <summary>Represents a location to be sent.<br/><br/><i>(InputPoll*Media can be cast into <see cref="InputMediaLocation"/>)</i></summary>
+    Location,
+    /// <summary>Represents a sticker file to be sent.<br/><br/><i>(InputPoll*Media can be cast into <see cref="InputMediaSticker"/>)</i></summary>
+    Sticker,
+    /// <summary>Represents a venue to be sent.<br/><br/><i>(InputPoll*Media can be cast into <see cref="InputMediaVenue"/>)</i></summary>
+    Venue,
 }

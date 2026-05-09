@@ -9,4 +9,6 @@ public enum InputPaidMediaType
     Photo = 1,
     /// <summary>The paid media to send is a video.<br/><br/><i>(<see cref="InputPaidMedia"/> can be cast into <see cref="InputPaidMediaVideo"/>)</i></summary>
     Video,
+    /// <summary>The paid media to send is a live photo.<br/><br/><i>(<see cref="InputPaidMedia"/> can be cast into <see cref="InputPaidMediaLivePhoto"/>)</i></summary>
+    LivePhoto,
 }

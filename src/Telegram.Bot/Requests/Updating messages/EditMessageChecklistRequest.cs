@@ -10,10 +10,10 @@ public partial class EditMessageChecklistRequest() : RequestBase<Message>("editM
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string BusinessConnectionId { get; set; }
 
-    /// <summary>Unique identifier for the target chat</summary>
+    /// <summary>Unique identifier for the target chat or username of the target bot in the format <c>@username</c></summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
-    public required long ChatId { get; set; }
+    public required ChatId ChatId { get; set; }
 
     /// <summary>Unique identifier for the target message</summary>
     [JsonPropertyName("message_id")]
@@ -27,7 +27,4 @@ public partial class EditMessageChecklistRequest() : RequestBase<Message>("editM
     /// <summary>An object for the new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a> for the message</summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
-
-    /// <inheritdoc/>
-    ChatId IChatTargetable.ChatId => ChatId;
 }

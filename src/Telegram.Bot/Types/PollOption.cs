@@ -17,6 +17,9 @@ public partial class PollOption
     [JsonPropertyName("text_entities")]
     public MessageEntity[]? TextEntities { get; set; }
 
+    /// <summary><em>Optional</em>. Media added to the poll option</summary>
+    public PollMedia? Media { get; set; }
+
     /// <summary>Number of users who voted for this option; may be 0 if unknown</summary>
     [JsonPropertyName("voter_count")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]

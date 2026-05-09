@@ -5,10 +5,10 @@ namespace Telegram.Bot.Requests;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class SendGameRequest() : RequestBase<Message>("sendGame"), IChatTargetable, IBusinessConnectable
 {
-    /// <summary>Unique identifier for the target chat. Games can't be sent to channel direct messages chats and channel chats.</summary>
+    /// <summary>Unique identifier for the target chat or username of the target bot in the format <c>@username</c>. Games can't be sent to channel direct messages chats and channel chats.</summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
-    public required long ChatId { get; set; }
+    public required ChatId ChatId { get; set; }
 
     /// <summary>Short name of the game, serves as the unique identifier for the game. Set up your games via <a href="https://t.me/botfather">@BotFather</a>.</summary>
     [JsonPropertyName("game_short_name")]
@@ -46,7 +46,4 @@ public partial class SendGameRequest() : RequestBase<Message>("sendGame"), IChat
     /// <summary>An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>. If empty, one 'Play GameTitle' button will be shown. If not empty, the first button must launch the game.</summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
-
-    /// <inheritdoc/>
-    ChatId IChatTargetable.ChatId => ChatId;
 }

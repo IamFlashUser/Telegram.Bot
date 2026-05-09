@@ -44,9 +44,13 @@ public partial class ChatPermissions
     [JsonPropertyName("can_add_web_page_previews")]
     public bool CanAddWebPagePreviews { get; set; }
 
-    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to edit their own tag</summary>
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to react to messages. If omitted, defaults to the value of <see cref="CanSendMessages">CanSendMessages</see>.</summary>
+    [JsonPropertyName("can_react_to_messages")]
+    public bool? CanReactToMessages { get; set; }
+
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to edit their own tag. If omitted, defaults to the value of <see cref="CanPinMessages">CanPinMessages</see>.</summary>
     [JsonPropertyName("can_edit_tag")]
-    public bool CanEditTag { get; set; }
+    public bool? CanEditTag { get; set; }
 
     /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to change the chat title, photo and other settings. Ignored in public supergroups</summary>
     [JsonPropertyName("can_change_info")]

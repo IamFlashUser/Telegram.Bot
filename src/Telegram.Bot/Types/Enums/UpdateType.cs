@@ -55,4 +55,6 @@ public enum UpdateType
     PurchasedPaidMedia,
     /// <summary>The <see cref="Update"/> contains a <see cref="Update.ManagedBot"/></summary>
     ManagedBot,
+    /// <summary>The <see cref="Update"/> contains a <see cref="Update.GuestMessage"/></summary>
+    GuestMessage,
 }

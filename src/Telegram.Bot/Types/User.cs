@@ -44,6 +44,10 @@ public partial class User
     [JsonPropertyName("can_read_all_group_messages")]
     public bool CanReadAllGroupMessages { get; set; }
 
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the bot supports guest queries from chats it is not a member of. Returned only in <see cref="TelegramBotClientExtensions.GetMe">GetMe</see>.</summary>
+    [JsonPropertyName("supports_guest_queries")]
+    public bool SupportsGuestQueries { get; set; }
+
     /// <summary><em>Optional</em>. <see langword="true"/>, if the bot supports inline queries. Returned only in <see cref="TelegramBotClientExtensions.GetMe">GetMe</see>.</summary>
     [JsonPropertyName("supports_inline_queries")]
     public bool SupportsInlineQueries { get; set; }

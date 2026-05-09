@@ -10,10 +10,10 @@ public partial class SendChecklistRequest() : RequestBase<Message>("sendChecklis
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string BusinessConnectionId { get; set; }
 
-    /// <summary>Unique identifier for the target chat</summary>
+    /// <summary>Unique identifier for the target chat or username of the target bot in the format <c>@username</c></summary>
     [JsonPropertyName("chat_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
-    public required long ChatId { get; set; }
+    public required ChatId ChatId { get; set; }
 
     /// <summary>An object for the checklist to send</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
@@ -38,7 +38,4 @@ public partial class SendChecklistRequest() : RequestBase<Message>("sendChecklis
     /// <summary>An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
-
-    /// <inheritdoc/>
-    ChatId IChatTargetable.ChatId => ChatId;
 }

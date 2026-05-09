@@ -127,8 +127,8 @@ namespace Telegram.Bot.Types
         {
             CanSendMessages = CanSendAudios = CanSendDocuments = CanSendPhotos = defaultValue;
             CanSendVideos = CanSendVideoNotes = CanSendVoiceNotes = CanSendPolls = CanSendOtherMessages = defaultValue;
-            CanAddWebPagePreviews = CanChangeInfo = CanInviteUsers = CanPinMessages = CanEditTag = defaultValue;
-            CanManageTopics = defaultValue;
+            CanAddWebPagePreviews = CanChangeInfo = CanInviteUsers = CanPinMessages = defaultValue;
+            CanManageTopics = CanEditTag = CanReactToMessages = defaultValue;
         }
     }
 
@@ -238,6 +238,26 @@ namespace Telegram.Bot.Types
         public static implicit operator string(LoginUrl self) => self.Url;
         /// <summary>Implicit conversion from string (Url)</summary>
         public static implicit operator LoginUrl(string url) => new() { Url = url };
+    }
+
+    public partial class PollMedia
+    {
+        /// <summary>Gets the <see cref="InputMediaType">type</see> of the <see cref="PollMedia"/></summary>
+        /// <value>The <see cref="InputMediaType">type</see> of the <see cref="PollMedia"/></value>
+        [JsonIgnore]
+        public InputMediaType Type => this switch
+        {
+            { Animation: not null } => InputMediaType.Animation,
+            { Audio: not null } => InputMediaType.Audio,
+            { Document: not null } => InputMediaType.Document,
+            { LivePhoto: not null } => InputMediaType.LivePhoto,
+            { Location: not null } => InputMediaType.Location,
+            { Photo: not null } => InputMediaType.Photo,
+            { Sticker: not null } => InputMediaType.Sticker,
+            { Venue: not null } => InputMediaType.Venue,
+            { Video: not null } => InputMediaType.Video,
+            _ => (InputMediaType)0
+        };
     }
 
 

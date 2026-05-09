@@ -61,6 +61,14 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     [JsonPropertyName("hide_results_until_closes")]
     public bool HideResultsUntilCloses { get; set; }
 
+    /// <summary>Pass <see langword="true"/>, if voting is limited to users who have been members of the chat where the poll is being sent for more than 24 hours; for channel chats only</summary>
+    [JsonPropertyName("members_only")]
+    public bool MembersOnly { get; set; }
+
+    /// <summary>A list of 0-12 two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country codes indicating the countries from which users can vote in the poll; for channel chats only. If omitted or empty, then users from any country can participate in the poll.</summary>
+    [JsonPropertyName("country_codes")]
+    public IEnumerable<string>? CountryCodes { get; set; }
+
     /// <summary>A list of monotonically increasing 0-based identifiers of the correct answer options, required for polls in quiz mode</summary>
     [JsonPropertyName("correct_option_ids")]
     public IEnumerable<int>? CorrectOptionIds { get; set; }
@@ -75,6 +83,10 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     /// <summary>A list of special entities that appear in the poll explanation. It can be specified instead of <see cref="ExplanationParseMode">ExplanationParseMode</see></summary>
     [JsonPropertyName("explanation_entities")]
     public IEnumerable<MessageEntity>? ExplanationEntities { get; set; }
+
+    /// <summary>Media added to the quiz explanation</summary>
+    [JsonPropertyName("explanation_media")]
+    public InputPollMedia? ExplanationMedia { get; set; }
 
     /// <summary>Amount of time in seconds the poll will be active after creation, 5-2628000. Can't be used together with <see cref="CloseDate">CloseDate</see>.</summary>
     [JsonPropertyName("open_period")]
@@ -99,6 +111,9 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     /// <summary>A list of special entities that appear in the poll description, which can be specified instead of <see cref="DescriptionParseMode">DescriptionParseMode</see></summary>
     [JsonPropertyName("description_entities")]
     public IEnumerable<MessageEntity>? DescriptionEntities { get; set; }
+
+    /// <summary>Media added to the poll description</summary>
+    public InputPollMedia? Media { get; set; }
 
     /// <summary>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</summary>
     [JsonPropertyName("disable_notification")]

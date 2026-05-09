@@ -28,6 +28,10 @@ public partial class ExternalReplyInfo
     /// <summary><em>Optional</em>. Message is a general file, information about the file</summary>
     public Document? Document { get; set; }
 
+    /// <summary><em>Optional</em>. Message is a live photo, information about the live photo</summary>
+    [JsonPropertyName("live_photo")]
+    public LivePhoto? LivePhoto { get; set; }
+
     /// <summary><em>Optional</em>. Message contains paid media; information about the paid media</summary>
     [JsonPropertyName("paid_media")]
     public PaidMediaInfo? PaidMedia { get; set; }

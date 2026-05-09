@@ -187,6 +187,10 @@ public partial class ChatMemberRestricted : ChatMember
     [JsonPropertyName("can_add_web_page_previews")]
     public bool CanAddWebPagePreviews { get; set; }
 
+    /// <summary><see langword="true"/>, if the user is allowed to react to messages</summary>
+    [JsonPropertyName("can_react_to_messages")]
+    public bool CanReactToMessages { get; set; }
+
     /// <summary><see langword="true"/>, if the user is allowed to edit their own tag</summary>
     [JsonPropertyName("can_edit_tag")]
     public bool CanEditTag { get; set; }

@@ -31,4 +31,21 @@ public partial class PollMedia
 
     /// <summary><em>Optional</em>. Media is a video, information about the video</summary>
     public Video? Video { get; set; }
+
+    /// <summary>Gets the <see cref="PollMediaType">type</see> of the <see cref="PollMedia"/></summary>
+    /// <value>The <see cref="PollMediaType">type</see> of the <see cref="PollMedia"/></value>
+    [JsonIgnore]
+    public PollMediaType Type => this switch
+    {
+        { Animation: not null }               => PollMediaType.Animation,
+        { Audio: not null }                   => PollMediaType.Audio,
+        { Document: not null }                => PollMediaType.Document,
+        { LivePhoto: not null }               => PollMediaType.LivePhoto,
+        { Location: not null }                => PollMediaType.Location,
+        { Photo: not null }                   => PollMediaType.Photo,
+        { Sticker: not null }                 => PollMediaType.Sticker,
+        { Venue: not null }                   => PollMediaType.Venue,
+        { Video: not null }                   => PollMediaType.Video,
+        _                                     => PollMediaType.Unknown
+    };
 }

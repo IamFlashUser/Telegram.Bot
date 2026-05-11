@@ -32,7 +32,7 @@ public partial class CopyMessageRequest() : RequestBase<MessageId>("copyMessage"
     [JsonPropertyName("video_start_timestamp")]
     public int? VideoStartTimestamp { get; set; }
 
-    /// <summary>New caption for media, 0-1024 characters after entities parsing. If not specified, the original caption is kept</summary>
+    /// <summary>New caption for media, 0-1024 characters after entities parsing. If not specified, the original caption is kept.</summary>
     public string? Caption { get; set; }
 
     /// <summary>Mode for parsing entities in the new caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</summary>
@@ -71,7 +71,7 @@ public partial class CopyMessageRequest() : RequestBase<MessageId>("copyMessage"
     [JsonPropertyName("reply_parameters")]
     public ReplyParameters? ReplyParameters { get; set; }
 
-    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</summary>
+    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</summary>
     [JsonPropertyName("reply_markup")]
     public ReplyMarkup? ReplyMarkup { get; set; }
 }

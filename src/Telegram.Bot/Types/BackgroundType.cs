@@ -73,7 +73,7 @@ public partial class BackgroundTypePattern : BackgroundType
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public int Intensity { get; set; }
 
-    /// <summary><em>Optional</em>. <see langword="true"/>, if the background fill must be applied only to the pattern itself. All other pixels are black in this case. For dark themes only</summary>
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the background fill must be applied only to the pattern itself. All other pixels are black in this case. For dark themes only.</summary>
     [JsonPropertyName("is_inverted")]
     public bool IsInverted { get; set; }
 

@@ -26,11 +26,11 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     [JsonPropertyName("message_thread_id")]
     public int? MessageThreadId { get; set; }
 
-    /// <summary>Mode for parsing entities in the question. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details. Currently, only custom emoji entities are allowed</summary>
+    /// <summary>Mode for parsing entities in the question. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details. Currently, only custom emoji entities are allowed.</summary>
     [JsonPropertyName("question_parse_mode")]
     public ParseMode QuestionParseMode { get; set; }
 
-    /// <summary>A list of special entities that appear in the poll question. It can be specified instead of <see cref="QuestionParseMode">QuestionParseMode</see></summary>
+    /// <summary>A list of special entities that appear in the poll question. It can be specified instead of <see cref="QuestionParseMode">QuestionParseMode</see>.</summary>
     [JsonPropertyName("question_entities")]
     public IEnumerable<MessageEntity>? QuestionEntities { get; set; }
 
@@ -65,7 +65,7 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     [JsonPropertyName("members_only")]
     public bool MembersOnly { get; set; }
 
-    /// <summary>A list of 0-12 two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country codes indicating the countries from which users can vote in the poll; for channel chats only. If omitted or empty, then users from any country can participate in the poll.</summary>
+    /// <summary>A list of 0-12 two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country codes indicating the countries from which users can vote in the poll; for channel chats only. Use “FT” as a country code to allow users with anonymous numbers to vote. If omitted or empty, then users from any country can participate in the poll.</summary>
     [JsonPropertyName("country_codes")]
     public IEnumerable<string>? CountryCodes { get; set; }
 
@@ -80,7 +80,7 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     [JsonPropertyName("explanation_parse_mode")]
     public ParseMode ExplanationParseMode { get; set; }
 
-    /// <summary>A list of special entities that appear in the poll explanation. It can be specified instead of <see cref="ExplanationParseMode">ExplanationParseMode</see></summary>
+    /// <summary>A list of special entities that appear in the poll explanation. It can be specified instead of <see cref="ExplanationParseMode">ExplanationParseMode</see>.</summary>
     [JsonPropertyName("explanation_entities")]
     public IEnumerable<MessageEntity>? ExplanationEntities { get; set; }
 
@@ -135,7 +135,7 @@ public partial class SendPollRequest() : RequestBase<Message>("sendPoll"), IChat
     [JsonPropertyName("reply_parameters")]
     public ReplyParameters? ReplyParameters { get; set; }
 
-    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</summary>
+    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</summary>
     [JsonPropertyName("reply_markup")]
     public ReplyMarkup? ReplyMarkup { get; set; }
 }

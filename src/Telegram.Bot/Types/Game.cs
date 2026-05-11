@@ -12,7 +12,7 @@ public partial class Game
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Description { get; set; } = default!;
 
-    /// <summary>Photo that will be displayed in the game message in chats.</summary>
+    /// <summary>Photo that will be displayed in the game message in chats</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public PhotoSize[] Photo { get; set; } = default!;
 
@@ -23,6 +23,6 @@ public partial class Game
     [JsonPropertyName("text_entities")]
     public MessageEntity[]? TextEntities { get; set; }
 
-    /// <summary><em>Optional</em>. Animation that will be displayed in the game message in chats. Upload via <a href="https://t.me/botfather">@BotFather</a></summary>
+    /// <summary><em>Optional</em>. Animation that will be displayed in the game message in chats. Upload via <a href="https://t.me/botfather">@BotFather</a>.</summary>
     public Animation? Animation { get; set; }
 }

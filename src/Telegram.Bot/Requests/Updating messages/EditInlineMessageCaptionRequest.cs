@@ -9,7 +9,7 @@ public partial class EditInlineMessageCaptionRequest() : RequestBase<bool>("edit
     [JsonPropertyName("business_connection_id")]
     public string? BusinessConnectionId { get; set; }
 
-    /// <summary>Identifier of the inline message</summary>
+    /// <summary>Identifier of the inline message.</summary>
     [JsonPropertyName("inline_message_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string InlineMessageId { get; set; }
@@ -29,7 +29,7 @@ public partial class EditInlineMessageCaptionRequest() : RequestBase<bool>("edit
     [JsonPropertyName("show_caption_above_media")]
     public bool ShowCaptionAboveMedia { get; set; }
 
-    /// <summary>An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</summary>
+    /// <summary>An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
 }

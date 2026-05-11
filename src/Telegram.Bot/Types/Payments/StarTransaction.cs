@@ -21,9 +21,9 @@ public partial class StarTransaction
     [JsonConverter(typeof(UnixDateTimeConverter))]
     public DateTime Date { get; set; }
 
-    /// <summary><em>Optional</em>. Source of an incoming transaction (e.g., a user purchasing goods or services, Fragment refunding a failed withdrawal). Only for incoming transactions</summary>
+    /// <summary><em>Optional</em>. Source of an incoming transaction (e.g., a user purchasing goods or services, Fragment refunding a failed withdrawal). Only for incoming transactions.</summary>
     public TransactionPartner? Source { get; set; }
 
-    /// <summary><em>Optional</em>. Receiver of an outgoing transaction (e.g., a user for a purchase refund, Fragment for a withdrawal). Only for outgoing transactions</summary>
+    /// <summary><em>Optional</em>. Receiver of an outgoing transaction (e.g., a user for a purchase refund, Fragment for a withdrawal). Only for outgoing transactions.</summary>
     public TransactionPartner? Receiver { get; set; }
 }

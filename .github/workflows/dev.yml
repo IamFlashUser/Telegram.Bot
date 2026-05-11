@@ -37,7 +37,7 @@ jobs:
                 NEXT_VERSION=${LAST_TAG%.*}.$((${LAST_TAG##*.} + 1))-dev.$COMMITS
         fi
         RELEASE_VERSION=${{vars.RELEASE_VERSION}}-dev.$COMMITS
-        VERSION=$RELEASE_VERSION
+        if [[ "$RELEASE_VERSION" > "$NEXT_VERSION" ]] then VERSION=$RELEASE_VERSION; else VERSION=$NEXT_VERSION; fi
         echo Last tag: $LAST_TAG · Next version: $NEXT_VERSION · Release version: $RELEASE_VERSION · Build version: $VERSION
         echo "VERSION=$VERSION" >> $GITHUB_ENV
 

@@ -211,7 +211,7 @@ public partial class ChatMemberRestricted : ChatMember
     [JsonPropertyName("can_manage_topics")]
     public bool CanManageTopics { get; set; }
 
-    /// <summary>Date when restrictions will be lifted for this user, in UTC. If unset, then the user is restricted forever</summary>
+    /// <summary>Date when restrictions will be lifted for this user, in UTC. If unset, then the user is restricted forever.</summary>
     [JsonPropertyName("until_date")]
     [JsonConverter(typeof(BanTimeConverter))]
     public DateTime? UntilDate { get; set; }
@@ -230,7 +230,7 @@ public partial class ChatMemberBanned : ChatMember
     /// <summary>The member's status in the chat, always <see cref="ChatMemberStatus.Kicked"/></summary>
     public override ChatMemberStatus Status => ChatMemberStatus.Kicked;
 
-    /// <summary>Date when restrictions will be lifted for this user, in UTC. If unset, then the user is banned forever</summary>
+    /// <summary>Date when restrictions will be lifted for this user, in UTC. If unset, then the user is banned forever.</summary>
     [JsonPropertyName("until_date")]
     [JsonConverter(typeof(BanTimeConverter))]
     public DateTime? UntilDate { get; set; }

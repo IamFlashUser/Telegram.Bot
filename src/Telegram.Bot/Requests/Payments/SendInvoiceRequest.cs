@@ -50,7 +50,7 @@ public partial class SendInvoiceRequest() : RequestBase<Message>("sendInvoice"),
     [JsonPropertyName("suggested_tip_amounts")]
     public IEnumerable<int>? SuggestedTipAmounts { get; set; }
 
-    /// <summary>Unique deep-linking parameter. If left empty, <b>forwarded copies</b> of the sent message will have a <em>Pay</em> button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a <em>URL</em> button with a deep link to the bot (instead of a <em>Pay</em> button), with the value used as the start parameter</summary>
+    /// <summary>Unique deep-linking parameter. If left empty, <b>forwarded copies</b> of the sent message will have a <em>Pay</em> button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a <em>URL</em> button with a deep link to the bot (instead of a <em>Pay</em> button), with the value used as the start parameter.</summary>
     [JsonPropertyName("start_parameter")]
     public string? StartParameter { get; set; }
 

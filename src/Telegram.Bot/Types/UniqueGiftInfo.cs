@@ -8,7 +8,7 @@ public partial class UniqueGiftInfo
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public UniqueGift Gift { get; set; } = default!;
 
-    /// <summary>Origin of the gift. Currently, either “upgrade” for gifts upgraded from regular gifts, “transfer” for gifts transferred from other users or channels, “resale” for gifts bought from other users, “GiftedUpgrade” for upgrades purchased after the gift was sent, or “offer” for gifts bought or sold through gift purchase offers</summary>
+    /// <summary>Origin of the gift. Currently, either “upgrade” for gifts upgraded from regular gifts, “transfer” for gifts transferred from other users or channels, “resale” for gifts bought from other users, “GiftedUpgrade” for upgrades purchased after the gift was sent, or “offer” for gifts bought or sold through gift purchase offers.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Origin { get; set; } = default!;
 
@@ -28,7 +28,7 @@ public partial class UniqueGiftInfo
     [JsonPropertyName("transfer_star_count")]
     public long? TransferStarCount { get; set; }
 
-    /// <summary><em>Optional</em>. Point in time when the gift can be transferred. If it is in the past, then the gift can be transferred now</summary>
+    /// <summary><em>Optional</em>. Point in time when the gift can be transferred. If it is in the past, then the gift can be transferred now.</summary>
     [JsonPropertyName("next_transfer_date")]
     [JsonConverter(typeof(UnixDateTimeConverter))]
     public DateTime? NextTransferDate { get; set; }

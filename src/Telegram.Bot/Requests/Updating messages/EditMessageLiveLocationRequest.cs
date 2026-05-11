@@ -10,7 +10,7 @@ public partial class EditMessageLiveLocationRequest() : RequestBase<Message>("ed
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
 
-    /// <summary>Identifier of the message to edit</summary>
+    /// <summary>Identifier of the message to edit.</summary>
     [JsonPropertyName("message_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int MessageId { get; set; }
@@ -27,7 +27,7 @@ public partial class EditMessageLiveLocationRequest() : RequestBase<Message>("ed
     [JsonPropertyName("business_connection_id")]
     public string? BusinessConnectionId { get; set; }
 
-    /// <summary>New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current <see cref="LivePeriod">LivePeriod</see> by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then <see cref="LivePeriod">LivePeriod</see> remains unchanged</summary>
+    /// <summary>New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current <see cref="LivePeriod">LivePeriod</see> by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then <see cref="LivePeriod">LivePeriod</see> remains unchanged.</summary>
     [JsonPropertyName("live_period")]
     public int? LivePeriod { get; set; }
 
@@ -42,7 +42,7 @@ public partial class EditMessageLiveLocationRequest() : RequestBase<Message>("ed
     [JsonPropertyName("proximity_alert_radius")]
     public int? ProximityAlertRadius { get; set; }
 
-    /// <summary>An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</summary>
+    /// <summary>An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
 }

@@ -34,7 +34,7 @@ public partial class SendLocationRequest() : RequestBase<Message>("sendLocation"
     [JsonPropertyName("horizontal_accuracy")]
     public double? HorizontalAccuracy { get; set; }
 
-    /// <summary>Period in seconds during which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely.</summary>
+    /// <summary>Period in seconds during which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely</summary>
     [JsonPropertyName("live_period")]
     public int? LivePeriod { get; set; }
 
@@ -69,7 +69,7 @@ public partial class SendLocationRequest() : RequestBase<Message>("sendLocation"
     [JsonPropertyName("reply_parameters")]
     public ReplyParameters? ReplyParameters { get; set; }
 
-    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</summary>
+    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</summary>
     [JsonPropertyName("reply_markup")]
     public ReplyMarkup? ReplyMarkup { get; set; }
 }

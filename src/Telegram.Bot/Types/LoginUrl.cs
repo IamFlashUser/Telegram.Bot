@@ -9,7 +9,7 @@ public partial class LoginUrl
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Url { get; set; } = default!;
 
-    /// <summary><em>Optional</em>. New text of the button in forwarded messages.</summary>
+    /// <summary><em>Optional</em>. New text of the button in forwarded messages</summary>
     [JsonPropertyName("forward_text")]
     public string? ForwardText { get; set; }
 
@@ -17,7 +17,7 @@ public partial class LoginUrl
     [JsonPropertyName("bot_username")]
     public string? BotUsername { get; set; }
 
-    /// <summary><em>Optional</em>. Pass <see langword="true"/> to request the permission for your bot to send messages to the user.</summary>
+    /// <summary><em>Optional</em>. Pass <see langword="true"/> to request the permission for your bot to send messages to the user</summary>
     [JsonPropertyName("request_write_access")]
     public bool RequestWriteAccess { get; set; }
 }

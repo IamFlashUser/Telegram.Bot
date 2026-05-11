@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types.ReplyMarkups;
 /// <summary>This object defines the criteria used to request suitable users. Information about the selected users will be shared with the bot when the corresponding button is pressed. <a href="https://core.telegram.org/bots/features#chat-and-user-selection">More about requesting users »</a></summary>
 public partial class KeyboardButtonRequestUsers
 {
-    /// <summary>Signed 32-bit identifier of the request that will be received back in the <see cref="UsersShared"/> object. Must be unique within the message</summary>
+    /// <summary>Signed 32-bit identifier of the request that will be received back in the <see cref="UsersShared"/> object. Must be unique within the message.</summary>
     [JsonPropertyName("request_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int RequestId { get; set; }
@@ -34,7 +34,7 @@ public partial class KeyboardButtonRequestUsers
     public bool RequestPhoto { get; set; }
 
     /// <summary>Initializes an instance of <see cref="KeyboardButtonRequestUsers"/></summary>
-    /// <param name="requestId">Signed 32-bit identifier of the request that will be received back in the <see cref="UsersShared"/> object. Must be unique within the message</param>
+    /// <param name="requestId">Signed 32-bit identifier of the request that will be received back in the <see cref="UsersShared"/> object. Must be unique within the message.</param>
     [SetsRequiredMembers]
     public KeyboardButtonRequestUsers(int requestId) => RequestId = requestId;
 

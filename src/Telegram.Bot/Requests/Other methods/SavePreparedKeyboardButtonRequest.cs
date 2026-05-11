@@ -10,7 +10,7 @@ public partial class SavePreparedKeyboardButtonRequest() : RequestBase<PreparedK
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required long UserId { get; set; }
 
-    /// <summary>An object describing the button to be saved. The button must be of the type <em>RequestUsers</em>, <em>RequestChat</em>, or <em>RequestManagedBot</em></summary>
+    /// <summary>An object describing the button to be saved. The button must be of the type <em>RequestUsers</em>, <em>RequestChat</em>, or <em>RequestManagedBot</em>.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required KeyboardButton Button { get; set; }
 }

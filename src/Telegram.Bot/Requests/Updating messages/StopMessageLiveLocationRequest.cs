@@ -10,7 +10,7 @@ public partial class StopMessageLiveLocationRequest() : RequestBase<Message>("st
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
 
-    /// <summary>Identifier of the message with live location to stop</summary>
+    /// <summary>Identifier of the message with live location to stop.</summary>
     [JsonPropertyName("message_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int MessageId { get; set; }
@@ -19,7 +19,7 @@ public partial class StopMessageLiveLocationRequest() : RequestBase<Message>("st
     [JsonPropertyName("business_connection_id")]
     public string? BusinessConnectionId { get; set; }
 
-    /// <summary>An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</summary>
+    /// <summary>An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
 }

@@ -3,7 +3,7 @@
 [![Nuget](https://img.shields.io/nuget/vpre/Telegram.Bot.svg?label=Telegram.Bot&style=flat-square&color=d8b541)](https://www.nuget.org/packages/Telegram.Bot)
 [![Bot API 10.0](https://img.shields.io/badge/Bot_API-10.0-f36caf.svg?style=flat-square)](https://core.telegram.org/bots/api)
 [![Documentations](https://img.shields.io/badge/Documentations-Book-orange.svg?style=flat-square)](https://telegrambots.github.io/book/)
-[![Telegram Chat](https://img.shields.io/badge/Support_Chat-Telegram-blue.svg?style=flat-square)](https://t.me/joinchat/B35YY0QbLfd034CFnvCtCA)  
+[![Telegram Chat](https://img.shields.io/badge/Support_Chat-Telegram-blue.svg?style=flat-square)](https://t.me/tgbot_chat)  
 [![Master build](https://img.shields.io/azure-devops/build/tgbots/14f9ab3f-313a-4339-8534-e8b96c7763cc/6?style=flat-square&label=master)](https://dev.azure.com/tgbots/Telegram.Bot/_build/latest?definitionId=6&branchName=master)
 [![Develop build](https://img.shields.io/azure-devops/build/tgbots/14f9ab3f-313a-4339-8534-e8b96c7763cc/10/develop?style=flat-square&label=develop)](https://dev.azure.com/tgbots/Telegram.Bot/_build/latest?definitionId=10&branchName=develop)
 [![Downloads](https://img.shields.io/nuget/dt/Telegram.Bot.svg?style=flat-square&label=Package%20Downloads)](https://www.nuget.org/packages/Telegram.Bot)
@@ -23,8 +23,8 @@ We, the [Telegram Bots team], mainly focus on developing multiple [NuGet package
 
 |Packages|Documentation|News Channel|Team|Group Chat|
 |:-----:|:-----------:|:----------:|:--:|:--------:|
-| [![Packages](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-nuget.png)](https://www.nuget.org/packages/Telegram.Bot) | [![documentations](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-docs.png)](https://telegrambots.github.io/book/) | [![News Channel](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-channel.jpg)](https://t.me/s/tgbots_dotnet) | [![Team](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-gh.png)](https://github.com/orgs/TelegramBots/people) | [![Group Chat](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-chat.jpg)](https://t.me/joinchat/B35YY0QbLfd034CFnvCtCA) |
-| nuget.org package feed | Telegram bots book | Subscribe to 📣 [`@tgbots_dotnet`] channel to get our latest news | The team contributing to this work | [Join our chat] 💬 to talk about bots and ask questions |
+| [![Packages](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-nuget.png)](https://www.nuget.org/packages/Telegram.Bot) | [![documentations](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-docs.png)](https://telegrambots.github.io/book/) | [![News Channel](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-channel.jpg)](https://t.me/s/tgbot_net) | [![Team](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-gh.png)](https://github.com/orgs/TelegramBots/people) | [![Group Chat](https://github.com/TelegramBots/Telegram.Bot/raw/master/docs/logo-chat.jpg)](https://t.me/tgbot_chat) |
+| nuget.org package feed | Telegram bots book | Subscribe to [@tgbot_net](https://t.me/tgbot_net) to get our latest news | The team contributing to this work | [Join our chat] to talk about bots and ask questions |
 
 ## 🔨 Getting Started
 
@@ -54,6 +54,11 @@ use it in your own bot projects.
 - [Documentation](https://telegrambots.github.io/book/)
 - [Examples](https://github.com/TelegramBots/Telegram.Bot.Examples)
 
+<br/>
+
+> [!NOTE]  
+> RIP Poulad. The team would like to thank him for his contributions to the project and the community.
+
 <!-- ---- -->
 
 [Telegram Bot API]: https://core.telegram.org/bots/api
@@ -61,8 +66,7 @@ use it in your own bot projects.
 [_Bots: An introduction for developers_]: https://core.telegram.org/bots
 [Telegram Bots team]: https://github.com/orgs/TelegramBots/people
 [NuGet packages]: https://www.nuget.org/profiles/TelegramBots
-[`@tgbots_dotnet`]: https://t.me/tgbots_dotnet
-[Join our chat]: https://t.me/joinchat/B35YY0QbLfd034CFnvCtCA
+[Join our chat]: https://t.me/tgbot_chat
 [the Quickstart guide]: https://telegrambots.github.io/book/1/quickstart.html
 [Telegram.Bot.Extensions.LoginWidget]: https://github.com/TelegramBots/Telegram.Bot.Extensions.LoginWidget
 [Telegram.Bot.Extensions.Passport]: https://github.com/TelegramBots/Telegram.Bot.Extensions.Passport

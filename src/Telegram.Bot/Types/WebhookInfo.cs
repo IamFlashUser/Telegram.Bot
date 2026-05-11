@@ -39,7 +39,7 @@ public partial class WebhookInfo
     [JsonPropertyName("max_connections")]
     public int? MaxConnections { get; set; }
 
-    /// <summary><em>Optional</em>. A list of update types the bot is subscribed to. Defaults to all update types except <em>ChatMember</em></summary>
+    /// <summary><em>Optional</em>. A list of update types the bot is subscribed to. Defaults to all update types except <em>ChatMember</em>.</summary>
     [JsonPropertyName("allowed_updates")]
     public UpdateType[]? AllowedUpdates { get; set; }
 }

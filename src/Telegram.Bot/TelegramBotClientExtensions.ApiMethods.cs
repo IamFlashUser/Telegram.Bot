@@ -37,7 +37,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to specify a URL and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized <see cref="Update"/>. In case of an unsuccessful request (a request with response <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status code</a> different from <c>2XY</c>), we will repeat the request and give up after a reasonable amount of attempts.<br/>If you'd like to make sure that the webhook was set by you, you can specify secret data in the parameter <paramref name="secretToken"/>. If specified, the request will contain a header “X-Telegram-Bot-Api-Secret-Token” with the secret token as content.</summary>
     /// <remarks><b>Notes</b><br/><b>1.</b> You will not be able to receive updates using <see cref="TelegramBotClientExtensions.GetUpdates">GetUpdates</see> for as long as an outgoing webhook is set up.<br/><b>2.</b> To use a self-signed certificate, you need to upload your <a href="https://core.telegram.org/bots/self-signed">public key certificate</a> using <paramref name="certificate"/> parameter. Please upload as InputFile, sending a String will not work.<br/><b>3.</b> Ports currently supported <em>for webhooks</em>: <b>443, 80, 88, 8443</b>.<br/>If you're having any trouble setting up webhooks, please check out this <a href="https://core.telegram.org/bots/webhooks">amazing guide to webhooks</a>.<br/></remarks>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="url">HTTPS URL to send updates to. Use an empty string to remove webhook integration</param>
+    /// <param name="url">HTTPS URL to send updates to. Use an empty string to remove webhook integration.</param>
     /// <param name="certificate">Upload your public key certificate so that the root certificate in use can be checked. See our <a href="https://core.telegram.org/bots/self-signed">self-signed guide</a> for details.</param>
     /// <param name="ipAddress">The fixed IP address which will be used to send webhook requests instead of the IP address resolved through DNS</param>
     /// <param name="maxConnections">The maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to <em>40</em>. Use lower values to limit the load on your bot's server, and higher values to increase your bot's throughput.</param>
@@ -131,7 +131,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="text">Text of the message to be sent, 1-4096 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the message text. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="linkPreviewOptions">Link preview generation options for the message</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="entities">A list of special entities that appear in message text, which can be specified instead of <paramref name="parseMode"/></param>
@@ -259,10 +259,10 @@ public static partial class TelegramBotClientExtensions
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></param>
     /// <param name="fromChatId">Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup or channel in the format <c>@username</c>)</param>
     /// <param name="messageId">Message identifier in the chat specified in <paramref name="fromChatId"/></param>
-    /// <param name="caption">New caption for media, 0-1024 characters after entities parsing. If not specified, the original caption is kept</param>
+    /// <param name="caption">New caption for media, 0-1024 characters after entities parsing. If not specified, the original caption is kept.</param>
     /// <param name="parseMode">Mode for parsing entities in the new caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="captionEntities">A list of special entities that appear in the new caption, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="showCaptionAboveMedia">Pass <see langword="true"/>, if the caption must be shown above the message media. Ignored if a new caption isn't specified.</param>
@@ -358,7 +358,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Photo caption (may also be used when resending photos by <em>FileId</em>), 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the photo caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="captionEntities">A list of special entities that appear in the caption, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="showCaptionAboveMedia">Pass <see langword="true"/>, if the caption must be shown above the message media</param>
@@ -486,7 +486,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Audio caption, 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the audio caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="duration">Duration of the audio in seconds</param>
     /// <param name="performer">Performer</param>
     /// <param name="title">Track name</param>
@@ -555,7 +555,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Document caption (may also be used when resending documents by <em>FileId</em>), 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the document caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="thumbnail">Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using <see cref="InputFileStream"/>. Thumbnails can't be reused and can be only uploaded as a new file, so you can use <see cref="InputFileStream(Stream, string?)"/> with a specific filename. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a></param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="captionEntities">A list of special entities that appear in the caption, which can be specified instead of <paramref name="parseMode"/></param>
@@ -618,7 +618,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Video caption (may also be used when resending videos by <em>FileId</em>), 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the video caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="duration">Duration of sent video in seconds</param>
     /// <param name="width">Video width</param>
     /// <param name="height">Video height</param>
@@ -702,7 +702,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Animation caption (may also be used when resending animation by <em>FileId</em>), 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the animation caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="duration">Duration of sent animation in seconds</param>
     /// <param name="width">Animation width</param>
     /// <param name="height">Animation height</param>
@@ -777,7 +777,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Voice message caption, 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the voice message caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="duration">Duration of the voice message in seconds</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="captionEntities">A list of special entities that appear in the caption, which can be specified instead of <paramref name="parseMode"/></param>
@@ -832,9 +832,9 @@ public static partial class TelegramBotClientExtensions
     /// <summary>As of <a href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>, Telegram clients support rounded square MPEG4 videos of up to 1 minute long. Use this method to send video messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></param>
-    /// <param name="videoNote">Video note to send. Pass a FileId as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using <see cref="InputFileStream"/>. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a>. Sending video notes by a URL is currently unsupported</param>
+    /// <param name="videoNote">Video note to send. Pass a FileId as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using <see cref="InputFileStream"/>. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a>. Sending video notes by a URL is currently unsupported.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="duration">Duration of sent video in seconds</param>
     /// <param name="length">Video width and height, i.e. diameter of the video message</param>
     /// <param name="thumbnail">Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using <see cref="InputFileStream"/>. Thumbnails can't be reused and can be only uploaded as a new file, so you can use <see cref="InputFileStream(Stream, string?)"/> with a specific filename. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a></param>
@@ -893,7 +893,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="caption">Media caption, 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the media caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="payload">Bot-defined paid media payload, 0-128 bytes. This will not be displayed to the user, use it for your internal processes.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="captionEntities">A list of special entities that appear in the caption, which can be specified instead of <paramref name="parseMode"/></param>
@@ -994,9 +994,9 @@ public static partial class TelegramBotClientExtensions
     /// <param name="latitude">Latitude of the location</param>
     /// <param name="longitude">Longitude of the location</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="horizontalAccuracy">The radius of uncertainty for the location, measured in meters; 0-1500</param>
-    /// <param name="livePeriod">Period in seconds during which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely.</param>
+    /// <param name="livePeriod">Period in seconds during which the location will be updated (see <a href="https://telegram.org/blog/live-locations">Live Locations</a>, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely</param>
     /// <param name="heading">For live locations, a direction in which the user is moving, in degrees. Must be between 1 and 360 if specified.</param>
     /// <param name="proximityAlertRadius">For live locations, a maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
@@ -1058,7 +1058,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="title">Name of the venue</param>
     /// <param name="address">Address of the venue</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="foursquareId">Foursquare identifier of the venue</param>
     /// <param name="foursquareType">Foursquare type of the venue, if known. (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.)</param>
     /// <param name="googlePlaceId">Google Places identifier of the venue</param>
@@ -1126,7 +1126,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="lastName">Contact's last name</param>
     /// <param name="vcard">Additional data about the contact in the form of a <a href="https://en.wikipedia.org/wiki/VCard">vCard</a>, 0-2048 bytes</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="disableNotification">Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</param>
     /// <param name="protectContent">Protects the contents of the sent message from forwarding and saving</param>
@@ -1184,13 +1184,13 @@ public static partial class TelegramBotClientExtensions
     /// <param name="allowsMultipleAnswers">Pass <see langword="true"/>, if the poll allows multiple answers, defaults to <see langword="false"/></param>
     /// <param name="correctOptionIds">A list of monotonically increasing 0-based identifiers of the correct answer options, required for polls in quiz mode</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="explanation">Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style poll, 0-200 characters with at most 2 line feeds after entities parsing</param>
     /// <param name="explanationParseMode">Mode for parsing entities in the explanation. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
-    /// <param name="explanationEntities">A list of special entities that appear in the poll explanation. It can be specified instead of <paramref name="explanationParseMode"/></param>
+    /// <param name="explanationEntities">A list of special entities that appear in the poll explanation. It can be specified instead of <paramref name="explanationParseMode"/>.</param>
     /// <param name="explanationMedia">Media added to the quiz explanation</param>
-    /// <param name="questionParseMode">Mode for parsing entities in the question. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details. Currently, only custom emoji entities are allowed</param>
-    /// <param name="questionEntities">A list of special entities that appear in the poll question. It can be specified instead of <paramref name="questionParseMode"/></param>
+    /// <param name="questionParseMode">Mode for parsing entities in the question. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details. Currently, only custom emoji entities are allowed.</param>
+    /// <param name="questionEntities">A list of special entities that appear in the poll question. It can be specified instead of <paramref name="questionParseMode"/>.</param>
     /// <param name="media">Media added to the poll description</param>
     /// <param name="description">Description of the poll to be sent, 0-1024 characters after entities parsing</param>
     /// <param name="descriptionParseMode">Mode for parsing entities in the poll description. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
@@ -1209,7 +1209,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="allowAddingOptions">Pass <see langword="true"/>, if answer options can be added to the poll after creation; not supported for anonymous polls and quizzes</param>
     /// <param name="hideResultsUntilCloses">Pass <see langword="true"/>, if poll results must be shown only after the poll closes</param>
     /// <param name="membersOnly">Pass <see langword="true"/>, if voting is limited to users who have been members of the chat where the poll is being sent for more than 24 hours; for channel chats only</param>
-    /// <param name="countryCodes">A list of 0-12 two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country codes indicating the countries from which users can vote in the poll; for channel chats only. If omitted or empty, then users from any country can participate in the poll.</param>
+    /// <param name="countryCodes">A list of 0-12 two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> country codes indicating the countries from which users can vote in the poll; for channel chats only. Use “FT” as a country code to allow users with anonymous numbers to vote. If omitted or empty, then users from any country can participate in the poll.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The sent <see cref="Message"/> is returned.</returns>
     public static async Task<Message> SendPoll(
@@ -1325,9 +1325,9 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to send an animated emoji that will display a random value.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></param>
-    /// <param name="emoji">Emoji on which the dice throw animation is based. Currently, must be one of “🎲”, “🎯”, “🏀”, “⚽”, “🎳”, or “🎰”. Dice can have values 1-6 for “🎲”, “🎯” and “🎳”, values 1-5 for “🏀” and “⚽”, and values 1-64 for “🎰”. Defaults to “🎲”</param>
+    /// <param name="emoji">Emoji on which the dice throw animation is based. Currently, must be one of “🎲”, “🎯”, “🏀”, “⚽”, “🎳”, or “🎰”. Dice can have values 1-6 for “🎲”, “🎯” and “🎳”, values 1-5 for “🏀” and “⚽”, and values 1-64 for “🎰”. Defaults to “🎲”.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="disableNotification">Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</param>
     /// <param name="protectContent">Protects the contents of the sent message from forwarding</param>
@@ -1562,7 +1562,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="userId">Unique identifier of the target user</param>
     /// <param name="permissions">An object for new user permissions</param>
     /// <param name="useIndependentChatPermissions">Pass <see langword="true"/> if chat permissions are set independently. Otherwise, the <em>CanSendOtherMessages</em> and <em>CanAddWebPagePreviews</em> permissions will imply the <em>CanSendMessages</em>, <em>CanSendAudios</em>, <em>CanSendDocuments</em>, <em>CanSendPhotos</em>, <em>CanSendVideos</em>, <em>CanSendVideoNotes</em>, and <em>CanSendVoiceNotes</em> permissions; the <em>CanSendPolls</em> permission will imply the <em>CanSendMessages</em> permission.</param>
-    /// <param name="untilDate">Date when restrictions will be lifted for the user, in UTC. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever</param>
+    /// <param name="untilDate">Date when restrictions will be lifted for the user, in UTC. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task RestrictChatMember(
         this ITelegramBotClient botClient,
@@ -1594,7 +1594,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="canEditStories">Pass <see langword="true"/> if the administrator can edit stories posted by other users, post stories to the chat page, pin chat stories, and access the chat's story archive</param>
     /// <param name="canDeleteStories">Pass <see langword="true"/> if the administrator can delete stories posted by other users</param>
     /// <param name="canManageVideoChats">Pass <see langword="true"/> if the administrator can manage video chats</param>
-    /// <param name="canRestrictMembers">Pass <see langword="true"/> if the administrator can restrict, ban or unban chat members, or access supergroup statistics. For backward compatibility, defaults to <see langword="true"/> for promotions of channel administrators</param>
+    /// <param name="canRestrictMembers">Pass <see langword="true"/> if the administrator can restrict, ban or unban chat members, or access supergroup statistics. For backward compatibility, defaults to <see langword="true"/> for promotions of channel administrators.</param>
     /// <param name="canPromoteMembers">Pass <see langword="true"/> if the administrator can add new administrators with a subset of their own privileges or demote administrators that they have promoted, directly or indirectly (promoted by administrators that were appointed by him)</param>
     /// <param name="canChangeInfo">Pass <see langword="true"/> if the administrator can change chat title, photo and other settings</param>
     /// <param name="canInviteUsers">Pass <see langword="true"/> if the administrator can invite new users to the chat</param>
@@ -1758,7 +1758,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="name">Invite link name; 0-32 characters</param>
     /// <param name="expireDate">Point in time when the link will expire</param>
     /// <param name="memberLimit">The maximum number of users that can be members of the chat simultaneously after joining the chat via this invite link; 1-99999</param>
-    /// <param name="createsJoinRequest"><see langword="true"/>, if users joining the chat via the link need to be approved by chat administrators. If <see langword="true"/>, <paramref name="memberLimit"/> can't be specified</param>
+    /// <param name="createsJoinRequest"><see langword="true"/>, if users joining the chat via the link need to be approved by chat administrators. If <see langword="true"/>, <paramref name="memberLimit"/> can't be specified.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The new invite link as <see cref="ChatInviteLink"/> object.</returns>
     public static async Task<ChatInviteLink> CreateChatInviteLink(
@@ -1785,7 +1785,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="name">Invite link name; 0-32 characters</param>
     /// <param name="expireDate">Point in time when the link will expire</param>
     /// <param name="memberLimit">The maximum number of users that can be members of the chat simultaneously after joining the chat via this invite link; 1-99999</param>
-    /// <param name="createsJoinRequest"><see langword="true"/>, if users joining the chat via the link need to be approved by chat administrators. If <see langword="true"/>, <paramref name="memberLimit"/> can't be specified</param>
+    /// <param name="createsJoinRequest"><see langword="true"/>, if users joining the chat via the link need to be approved by chat administrators. If <see langword="true"/>, <paramref name="memberLimit"/> can't be specified.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The edited invite link as a <see cref="ChatInviteLink"/> object.</returns>
     public static async Task<ChatInviteLink> EditChatInviteLink(
@@ -2150,7 +2150,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target supergroup in the format <c>@username</c></param>
     /// <param name="name">Topic name, 1-128 characters</param>
-    /// <param name="iconColor">Color of the topic icon in RGB format. Currently, must be one of 7322096 (0x6FB9F0), 16766590 (0xFFD67E), 13338331 (0xCB86DB), 9367192 (0x8EEE98), 16749490 (0xFF93B2), or 16478047 (0xFB6F5F)</param>
+    /// <param name="iconColor">Color of the topic icon in RGB format. Currently, must be one of 7322096 (0x6FB9F0), 16766590 (0xFFD67E), 13338331 (0xCB86DB), 9367192 (0x8EEE98), 16749490 (0xFF93B2), or 16478047 (0xFB6F5F).</param>
     /// <param name="iconCustomEmojiId">Unique identifier of the custom emoji shown as the topic icon. Use <see cref="TelegramBotClientExtensions.GetForumTopicIconStickers">GetForumTopicIconStickers</see> to get all allowed custom emoji identifiers.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>Information about the created topic as a <see cref="ForumTopic"/> object.</returns>
@@ -2173,8 +2173,8 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target supergroup in the format <c>@username</c></param>
     /// <param name="messageThreadId">Unique identifier for the target message thread of the forum topic</param>
-    /// <param name="name">New topic name, 0-128 characters. If not specified or empty, the current name of the topic will be kept</param>
-    /// <param name="iconCustomEmojiId">New unique identifier of the custom emoji shown as the topic icon. Use <see cref="TelegramBotClientExtensions.GetForumTopicIconStickers">GetForumTopicIconStickers</see> to get all allowed custom emoji identifiers. Pass an empty string to remove the icon. If not specified, the current icon will be kept</param>
+    /// <param name="name">New topic name, 0-128 characters. If not specified or empty, the current name of the topic will be kept.</param>
+    /// <param name="iconCustomEmojiId">New unique identifier of the custom emoji shown as the topic icon. Use <see cref="TelegramBotClientExtensions.GetForumTopicIconStickers">GetForumTopicIconStickers</see> to get all allowed custom emoji identifiers. Pass an empty string to remove the icon. If not specified, the current icon will be kept.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task EditForumTopic(
         this ITelegramBotClient botClient,
@@ -2340,7 +2340,7 @@ public static partial class TelegramBotClientExtensions
     /// <remarks>Alternatively, the user can be redirected to the specified Game URL. For this option to work, you must first create a game for your bot via <a href="https://t.me/botfather">@BotFather</a> and accept the terms. Otherwise, you may use links like <c>t.me/your_bot?start=XXXX</c> that open your bot with a parameter.</remarks>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="callbackQueryId">Unique identifier for the query to be answered</param>
-    /// <param name="text">Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters</param>
+    /// <param name="text">Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters.</param>
     /// <param name="showAlert">If <see langword="true"/>, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to <see langword="false"/>.</param>
     /// <param name="url">URL that will be opened by the user's client. If you have created a <see cref="Game"/> and accepted the conditions via <a href="https://t.me/botfather">@BotFather</a>, specify the URL that opens your game - note that this will only work if the query comes from a <see cref="InlineKeyboardButton"><em>CallbackGame</em></see> button.<br/><br/>Otherwise, you may use links like <c>t.me/your_bot?start=XXXX</c> that open your bot with a parameter.</param>
     /// <param name="cacheTime">The maximum amount of time in seconds that the result of the callback query may be cached client-side. Telegram apps will support caching starting in version 3.14. Defaults to 0.</param>
@@ -2475,7 +2475,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="commands">A list of bot commands to be set as the list of the bot's commands. At most 100 commands can be specified.</param>
     /// <param name="scope">An object, describing scope of users for which the commands are relevant. Defaults to <see cref="BotCommandScopeDefault"/>.</param>
-    /// <param name="languageCode">A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands</param>
+    /// <param name="languageCode">A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task SetMyCommands(
         this ITelegramBotClient botClient,
@@ -2493,7 +2493,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to delete the list of the bot's commands for the given scope and user language. After deletion, <a href="https://core.telegram.org/bots/api#determining-list-of-commands">higher level commands</a> will be shown to affected users.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="scope">An object, describing scope of users for which the commands are relevant. Defaults to <see cref="BotCommandScopeDefault"/>.</param>
-    /// <param name="languageCode">A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands</param>
+    /// <param name="languageCode">A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task DeleteMyCommands(
         this ITelegramBotClient botClient,
@@ -2638,8 +2638,8 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to change the bot's menu button in a private chat, or the default menu button.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="chatId">Unique identifier for the target private chat. If not specified, default bot's menu button will be changed</param>
-    /// <param name="menuButton">An object for the bot's new menu button. Defaults to <see cref="MenuButtonDefault"/></param>
+    /// <param name="chatId">Unique identifier for the target private chat. If not specified, default bot's menu button will be changed.</param>
+    /// <param name="menuButton">An object for the bot's new menu button. Defaults to <see cref="MenuButtonDefault"/>.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task SetChatMenuButton(
         this ITelegramBotClient botClient,
@@ -2654,7 +2654,7 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to get the current value of the bot's menu button in a private chat, or the default menu button.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="chatId">Unique identifier for the target private chat. If not specified, default bot's menu button will be returned</param>
+    /// <param name="chatId">Unique identifier for the target private chat. If not specified, default bot's menu button will be returned.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns><see cref="MenuButton"/> on success.</returns>
     public static async Task<MenuButton> GetChatMenuButton(
@@ -2844,7 +2844,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Delete messages on behalf of a business account. Requires the <em>CanDeleteSentMessages</em> business bot right to delete messages sent by the bot itself, or the <em>CanDeleteAllMessages</em> business bot right to delete any message.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which to delete the messages</param>
-    /// <param name="messageIds">A list of 1-100 identifiers of messages to delete. All messages must be from the same chat. See <see cref="TelegramBotClientExtensions.DeleteMessage">DeleteMessage</see> for limitations on which messages can be deleted</param>
+    /// <param name="messageIds">A list of 1-100 identifiers of messages to delete. All messages must be from the same chat. See <see cref="TelegramBotClientExtensions.DeleteMessage">DeleteMessage</see> for limitations on which messages can be deleted.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task DeleteBusinessMessages(
         this ITelegramBotClient botClient,
@@ -3004,7 +3004,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="excludeUnique">Pass <see langword="true"/> to exclude unique gifts</param>
     /// <param name="sortByPrice">Pass <see langword="true"/> to sort results by gift price instead of send date. Sorting is applied before pagination.</param>
     /// <param name="offset">Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results</param>
-    /// <param name="limit">The maximum number of gifts to be returned; 1-100. Defaults to 100</param>
+    /// <param name="limit">The maximum number of gifts to be returned; 1-100. Defaults to 100.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns><see cref="OwnedGifts"/> on success.</returns>
     public static async Task<OwnedGifts> GetBusinessAccountGifts(
@@ -3046,7 +3046,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="excludeUnique">Pass <see langword="true"/> to exclude unique gifts</param>
     /// <param name="sortByPrice">Pass <see langword="true"/> to sort results by gift price instead of send date. Sorting is applied before pagination.</param>
     /// <param name="offset">Offset of the first entry to return as received from the previous request; use an empty string to get the first chunk of results</param>
-    /// <param name="limit">The maximum number of gifts to be returned; 1-100. Defaults to 100</param>
+    /// <param name="limit">The maximum number of gifts to be returned; 1-100. Defaults to 100.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns><see cref="OwnedGifts"/> on success.</returns>
     public static async Task<OwnedGifts> GetUserGifts(
@@ -3086,7 +3086,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="excludeUnique">Pass <see langword="true"/> to exclude unique gifts</param>
     /// <param name="sortByPrice">Pass <see langword="true"/> to sort results by gift price instead of send date. Sorting is applied before pagination.</param>
     /// <param name="offset">Offset of the first entry to return as received from the previous request; use an empty string to get the first chunk of results</param>
-    /// <param name="limit">The maximum number of gifts to be returned; 1-100. Defaults to 100</param>
+    /// <param name="limit">The maximum number of gifts to be returned; 1-100. Defaults to 100.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns><see cref="OwnedGifts"/> on success.</returns>
     public static async Task<OwnedGifts> GetChatGifts(
@@ -3342,7 +3342,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Stores a keyboard button that can be used by a user within a Mini App.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="userId">Unique identifier of the target user that can use the button</param>
-    /// <param name="button">An object describing the button to be saved. The button must be of the type <em>RequestUsers</em>, <em>RequestChat</em>, or <em>RequestManagedBot</em></param>
+    /// <param name="button">An object describing the button to be saved. The button must be of the type <em>RequestUsers</em>, <em>RequestChat</em>, or <em>RequestManagedBot</em>.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>A <see cref="PreparedKeyboardButton"/> object.</returns>
     public static async Task<PreparedKeyboardButton> SavePreparedKeyboardButton(
@@ -3363,10 +3363,10 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to edit text and <a href="https://core.telegram.org/bots/api#games">game</a> messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>.</param>
-    /// <param name="messageId">Identifier of the message to edit</param>
+    /// <param name="messageId">Identifier of the message to edit.</param>
     /// <param name="text">New text of the message, 1-4096 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the message text. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
-    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="linkPreviewOptions">Link preview generation options for the message</param>
     /// <param name="entities">A list of special entities that appear in message text, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
@@ -3397,10 +3397,10 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to edit text and <a href="https://core.telegram.org/bots/api#games">game</a> messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
     /// <param name="text">New text of the message, 1-4096 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the message text. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
-    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="linkPreviewOptions">Link preview generation options for the message</param>
     /// <param name="entities">A list of special entities that appear in message text, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
@@ -3429,10 +3429,10 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to edit captions of messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>.</param>
-    /// <param name="messageId">Identifier of the message to edit</param>
+    /// <param name="messageId">Identifier of the message to edit.</param>
     /// <param name="caption">New caption of the message, 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the message caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
-    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="captionEntities">A list of special entities that appear in the caption, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="showCaptionAboveMedia">Pass <see langword="true"/>, if the caption must be shown above the message media. Supported only for animation, photo and video messages.</param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
@@ -3463,10 +3463,10 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to edit captions of messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
     /// <param name="caption">New caption of the message, 0-1024 characters after entities parsing</param>
     /// <param name="parseMode">Mode for parsing entities in the message caption. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
-    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="captionEntities">A list of special entities that appear in the caption, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="showCaptionAboveMedia">Pass <see langword="true"/>, if the caption must be shown above the message media. Supported only for animation, photo and video messages.</param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
@@ -3495,9 +3495,9 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to edit animation, audio, document, live photo, photo, or video messages, or to add media to text messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its FileId or specify a URL.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>.</param>
-    /// <param name="messageId">Identifier of the message to edit</param>
+    /// <param name="messageId">Identifier of the message to edit.</param>
     /// <param name="media">An object for a new media content of the message</param>
-    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The edited <see cref="Message"/> is returned</returns>
@@ -3520,9 +3520,9 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to edit animation, audio, document, live photo, photo, or video messages, or to add media to text messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its FileId or specify a URL.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
     /// <param name="media">An object for a new media content of the message</param>
-    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task EditMessageMedia(
@@ -3543,14 +3543,14 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to edit live location messages. A location can be edited until its <paramref name="livePeriod"/> expires or editing is explicitly disabled by a call to <see cref="TelegramBotClientExtensions.StopMessageLiveLocation">StopMessageLiveLocation</see>.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>.</param>
-    /// <param name="messageId">Identifier of the message to edit</param>
+    /// <param name="messageId">Identifier of the message to edit.</param>
     /// <param name="latitude">Latitude of new location</param>
     /// <param name="longitude">Longitude of new location</param>
-    /// <param name="livePeriod">New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current <paramref name="livePeriod"/> by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then <paramref name="livePeriod"/> remains unchanged</param>
+    /// <param name="livePeriod">New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current <paramref name="livePeriod"/> by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then <paramref name="livePeriod"/> remains unchanged.</param>
     /// <param name="horizontalAccuracy">The radius of uncertainty for the location, measured in meters; 0-1500</param>
     /// <param name="heading">Direction in which the user is moving, in degrees. Must be between 1 and 360 if specified.</param>
     /// <param name="proximityAlertRadius">The maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified.</param>
-    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The edited <see cref="Message"/> is returned</returns>
@@ -3583,14 +3583,14 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to edit live location messages. A location can be edited until its <paramref name="livePeriod"/> expires or editing is explicitly disabled by a call to <see cref="TelegramBotClientExtensions.StopMessageLiveLocation">StopMessageLiveLocation</see>.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
     /// <param name="latitude">Latitude of new location</param>
     /// <param name="longitude">Longitude of new location</param>
-    /// <param name="livePeriod">New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current <paramref name="livePeriod"/> by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then <paramref name="livePeriod"/> remains unchanged</param>
+    /// <param name="livePeriod">New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current <paramref name="livePeriod"/> by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then <paramref name="livePeriod"/> remains unchanged.</param>
     /// <param name="horizontalAccuracy">The radius of uncertainty for the location, measured in meters; 0-1500</param>
     /// <param name="heading">Direction in which the user is moving, in degrees. Must be between 1 and 360 if specified.</param>
     /// <param name="proximityAlertRadius">The maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified.</param>
-    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task EditMessageLiveLocation(
@@ -3621,8 +3621,8 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to stop updating a live location message before <em>LivePeriod</em> expires.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>.</param>
-    /// <param name="messageId">Identifier of the message with live location to stop</param>
-    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="messageId">Identifier of the message with live location to stop.</param>
+    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The edited <see cref="Message"/> is returned</returns>
@@ -3643,8 +3643,8 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to stop updating a live location message before <em>LivePeriod</em> expires.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
-    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
+    /// <param name="replyMarkup">An object for a new <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task StopMessageLiveLocation(
@@ -3689,8 +3689,8 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to edit only the reply markup of messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>.</param>
-    /// <param name="messageId">Identifier of the message to edit</param>
-    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="messageId">Identifier of the message to edit.</param>
+    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The edited <see cref="Message"/> is returned</returns>
@@ -3711,8 +3711,8 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to edit only the reply markup of messages.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
-    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
+    /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task EditMessageReplyMarkup(
@@ -3732,7 +3732,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></param>
     /// <param name="messageId">Identifier of the original message with the poll</param>
-    /// <param name="replyMarkup">An object for a new message <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</param>
+    /// <param name="replyMarkup">An object for a new message <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the message to be edited was sent</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The stopped <see cref="Poll"/> is returned.</returns>
@@ -3755,7 +3755,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target direct messages chat</param>
     /// <param name="messageId">Identifier of a suggested post message to approve</param>
-    /// <param name="sendDate">Point in time when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future</param>
+    /// <param name="sendDate">Point in time when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task ApproveSuggestedPost(
         this ITelegramBotClient botClient,
@@ -3808,7 +3808,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to delete multiple messages simultaneously. If some of the specified messages can't be found, they are skipped.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></param>
-    /// <param name="messageIds">A list of 1-100 identifiers of messages to delete. See <see cref="TelegramBotClientExtensions.DeleteMessage">DeleteMessage</see> for limitations on which messages can be deleted</param>
+    /// <param name="messageIds">A list of 1-100 identifiers of messages to delete. See <see cref="TelegramBotClientExtensions.DeleteMessage">DeleteMessage</see> for limitations on which messages can be deleted.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task DeleteMessages(
         this ITelegramBotClient botClient,
@@ -3871,7 +3871,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c></param>
     /// <param name="sticker">Sticker to send. Pass a FileId as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a .WEBP sticker from the Internet, or upload a new .WEBP, .TGS, or .WEBM sticker using <see cref="InputFileStream"/>. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a>. Video and animated stickers can't be sent via an HTTP URL.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
-    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</param>
+    /// <param name="replyMarkup">Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</param>
     /// <param name="emoji">Emoji associated with the sticker; only for just uploaded stickers</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="disableNotification">Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</param>
@@ -4151,7 +4151,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method to set the thumbnail of a custom emoji sticker set.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="name">Sticker set name</param>
-    /// <param name="customEmojiId">Custom emoji identifier of a sticker from the sticker set; pass an empty string to drop the thumbnail and use the first sticker as the thumbnail.</param>
+    /// <param name="customEmojiId">Custom emoji identifier of a sticker from the sticker set; pass an empty string to drop the thumbnail and use the first sticker as the thumbnail</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task SetCustomEmojiStickerSetThumbnail(
         this ITelegramBotClient botClient,
@@ -4238,7 +4238,7 @@ public static partial class TelegramBotClientExtensions
     /// <param name="isFlexible">Pass <see langword="true"/> if the final price depends on the shipping method. Ignored for payments in <a href="https://t.me/BotNews/90">Telegram Stars</a>.</param>
     /// <param name="replyParameters">Description of the message to reply to</param>
     /// <param name="replyMarkup">An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>. If empty, one 'Pay <c>total price</c>' button will be shown. If not empty, the first button must be a Pay button.</param>
-    /// <param name="startParameter">Unique deep-linking parameter. If left empty, <b>forwarded copies</b> of the sent message will have a <em>Pay</em> button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a <em>URL</em> button with a deep link to the bot (instead of a <em>Pay</em> button), with the value used as the start parameter</param>
+    /// <param name="startParameter">Unique deep-linking parameter. If left empty, <b>forwarded copies</b> of the sent message will have a <em>Pay</em> button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a <em>URL</em> button with a deep link to the bot (instead of a <em>Pay</em> button), with the value used as the start parameter.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="disableNotification">Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</param>
     /// <param name="protectContent">Protects the contents of the sent message from forwarding and saving</param>
@@ -4560,9 +4560,9 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="userId">User identifier</param>
     /// <param name="score">New score, must be non-negative</param>
-    /// <param name="chatId">Unique identifier for the target chat</param>
-    /// <param name="messageId">Identifier of the sent message</param>
-    /// <param name="force">Pass <see langword="true"/> if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters</param>
+    /// <param name="chatId">Unique identifier for the target chat.</param>
+    /// <param name="messageId">Identifier of the sent message.</param>
+    /// <param name="force">Pass <see langword="true"/> if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters.</param>
     /// <param name="disableEditMessage">Pass <see langword="true"/> if the game message should not be automatically edited to include the current scoreboard</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>The <see cref="Message"/> is returned</returns>
@@ -4590,8 +4590,8 @@ public static partial class TelegramBotClientExtensions
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="userId">User identifier</param>
     /// <param name="score">New score, must be non-negative</param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
-    /// <param name="force">Pass <see langword="true"/> if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
+    /// <param name="force">Pass <see langword="true"/> if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters.</param>
     /// <param name="disableEditMessage">Pass <see langword="true"/> if the game message should not be automatically edited to include the current scoreboard</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task SetGameScore(
@@ -4615,8 +4615,8 @@ public static partial class TelegramBotClientExtensions
     /// <remarks>This method will currently return scores for the target user, plus two of their closest neighbors on each side. Will also return the top three users if the user and their neighbors are not among them. Please note that this behavior is subject to change.</remarks>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="userId">Target user id</param>
-    /// <param name="chatId">Unique identifier for the target chat</param>
-    /// <param name="messageId">Identifier of the sent message</param>
+    /// <param name="chatId">Unique identifier for the target chat.</param>
+    /// <param name="messageId">Identifier of the sent message.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>An Array of <see cref="GameHighScore"/> objects.</returns>
     public static async Task<GameHighScore[]> GetGameHighScores(
@@ -4636,7 +4636,7 @@ public static partial class TelegramBotClientExtensions
     /// <remarks>This method will currently return scores for the target user, plus two of their closest neighbors on each side. Will also return the top three users if the user and their neighbors are not among them. Please note that this behavior is subject to change.</remarks>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
     /// <param name="userId">Target user id</param>
-    /// <param name="inlineMessageId">Identifier of the inline message</param>
+    /// <param name="inlineMessageId">Identifier of the inline message.</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     /// <returns>An Array of <see cref="GameHighScore"/> objects.</returns>
     public static async Task<GameHighScore[]> GetGameHighScores(

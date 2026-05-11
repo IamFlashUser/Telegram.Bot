@@ -64,11 +64,11 @@ public partial class Update
     [JsonPropertyName("callback_query")]
     public CallbackQuery? CallbackQuery { get; set; }
 
-    /// <summary><em>Optional</em>. New incoming shipping query. Only for invoices with flexible price</summary>
+    /// <summary><em>Optional</em>. New incoming shipping query. Only for invoices with flexible price.</summary>
     [JsonPropertyName("shipping_query")]
     public ShippingQuery? ShippingQuery { get; set; }
 
-    /// <summary><em>Optional</em>. New incoming pre-checkout query. Contains full information about checkout</summary>
+    /// <summary><em>Optional</em>. New incoming pre-checkout query. Contains full information about checkout.</summary>
     [JsonPropertyName("pre_checkout_query")]
     public PreCheckoutQuery? PreCheckoutQuery { get; set; }
 
@@ -76,7 +76,7 @@ public partial class Update
     [JsonPropertyName("purchased_paid_media")]
     public PaidMediaPurchased? PurchasedPaidMedia { get; set; }
 
-    /// <summary><em>Optional</em>. New poll state. Bots receive only updates about manually stopped polls and polls, which are sent by the bot</summary>
+    /// <summary><em>Optional</em>. New poll state. Bots receive only updates about manually stopped polls and polls, which are sent by the bot.</summary>
     public Poll? Poll { get; set; }
 
     /// <summary><em>Optional</em>. A user changed their answer in a non-anonymous poll. Bots receive new votes only in polls that were sent by the bot itself.</summary>

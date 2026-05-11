@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types;
 /// <summary>This object represents a venue.</summary>
 public partial class Venue
 {
-    /// <summary>Venue location. Can't be a live location</summary>
+    /// <summary>Venue location. Can't be a live location.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public Location Location { get; set; } = default!;
 

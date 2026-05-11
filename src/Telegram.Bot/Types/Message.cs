@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types;
 /// <summary>This object represents a message.</summary>
 public partial class Message
 {
-    /// <summary>Unique message identifier inside this chat. In specific instances (e.g., message containing a video sent to a big chat), the server might automatically schedule a message instead of sending it immediately. In such cases, this field will be 0 and the relevant message will be unusable until it is actually sent</summary>
+    /// <summary>Unique message identifier inside this chat. In specific instances (e.g., message containing a video sent to a big chat), the server might automatically schedule a message instead of sending it immediately. In such cases, this field will be 0 and the relevant message will be unusable until it is actually sent.</summary>
     [JsonPropertyName("message_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public int Id { get; set; }
@@ -17,7 +17,7 @@ public partial class Message
     [JsonPropertyName("direct_messages_topic")]
     public DirectMessagesTopic? DirectMessagesTopic { get; set; }
 
-    /// <summary><em>Optional</em>. Sender of the message; may be empty for messages sent to channels. For backward compatibility, if the message was sent on behalf of a chat, the field contains a fake sender user in non-channel chats</summary>
+    /// <summary><em>Optional</em>. Sender of the message; may be empty for messages sent to channels. For backward compatibility, if the message was sent on behalf of a chat, the field contains a fake sender user in non-channel chats.</summary>
     public User? From { get; set; }
 
     /// <summary><em>Optional</em>. Sender of the message when sent on behalf of a chat. For example, the supergroup itself for messages sent by its anonymous administrators or a linked channel for messages automatically forwarded to the channel's discussion group. For backward compatibility, if the message was sent on behalf of a chat, the field <see cref="From">From</see> contains a fake sender user in non-channel chats.</summary>
@@ -147,7 +147,7 @@ public partial class Message
     [JsonPropertyName("effect_id")]
     public string? EffectId { get; set; }
 
-    /// <summary><em>Optional</em>. Message is an animation, information about the animation. For backward compatibility, when this field is set, the <see cref="Document">Document</see> field will also be set</summary>
+    /// <summary><em>Optional</em>. Message is an animation, information about the animation. For backward compatibility, when this field is set, the <see cref="Document">Document</see> field will also be set.</summary>
     public Animation? Animation { get; set; }
 
     /// <summary><em>Optional</em>. Message is an audio file, information about the file</summary>
@@ -156,7 +156,7 @@ public partial class Message
     /// <summary><em>Optional</em>. Message is a general file, information about the file</summary>
     public Document? Document { get; set; }
 
-    /// <summary><em>Optional</em>. Message is a live photo, information about the live photo. For backward compatibility, when this field is set, the <see cref="Photo">Photo</see> field will also be set</summary>
+    /// <summary><em>Optional</em>. Message is a live photo, information about the live photo. For backward compatibility, when this field is set, the <see cref="Photo">Photo</see> field will also be set.</summary>
     [JsonPropertyName("live_photo")]
     public LivePhoto? LivePhoto { get; set; }
 
@@ -213,7 +213,7 @@ public partial class Message
     /// <summary><em>Optional</em>. Message is a native poll, information about the poll</summary>
     public Poll? Poll { get; set; }
 
-    /// <summary><em>Optional</em>. Message is a venue, information about the venue. For backward compatibility, when this field is set, the <see cref="Location">Location</see> field will also be set</summary>
+    /// <summary><em>Optional</em>. Message is a venue, information about the venue. For backward compatibility, when this field is set, the <see cref="Location">Location</see> field will also be set.</summary>
     public Venue? Venue { get; set; }
 
     /// <summary><em>Optional</em>. Message is a shared location, information about the location</summary>

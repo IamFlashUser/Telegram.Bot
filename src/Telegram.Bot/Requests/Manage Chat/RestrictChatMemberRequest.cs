@@ -23,7 +23,7 @@ public partial class RestrictChatMemberRequest() : RequestBase<bool>("restrictCh
     [JsonPropertyName("use_independent_chat_permissions")]
     public bool UseIndependentChatPermissions { get; set; }
 
-    /// <summary>Date when restrictions will be lifted for the user, in UTC. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever</summary>
+    /// <summary>Date when restrictions will be lifted for the user, in UTC. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever.</summary>
     [JsonPropertyName("until_date")]
     [JsonConverter(typeof(BanTimeConverter))]
     public DateTime? UntilDate { get; set; }

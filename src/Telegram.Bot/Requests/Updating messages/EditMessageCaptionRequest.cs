@@ -10,7 +10,7 @@ public partial class EditMessageCaptionRequest() : RequestBase<Message>("editMes
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
 
-    /// <summary>Identifier of the message to edit</summary>
+    /// <summary>Identifier of the message to edit.</summary>
     [JsonPropertyName("message_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int MessageId { get; set; }
@@ -34,7 +34,7 @@ public partial class EditMessageCaptionRequest() : RequestBase<Message>("editMes
     [JsonPropertyName("show_caption_above_media")]
     public bool ShowCaptionAboveMedia { get; set; }
 
-    /// <summary>An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>.</summary>
+    /// <summary>An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a></summary>
     [JsonPropertyName("reply_markup")]
     public InlineKeyboardMarkup? ReplyMarkup { get; set; }
 }

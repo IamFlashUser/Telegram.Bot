@@ -14,7 +14,7 @@ public partial class UniqueGift
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string BaseName { get; set; } = default!;
 
-    /// <summary>Unique name of the gift. This name can be used in <c>https://t.me/nft/...</c> links and story areas</summary>
+    /// <summary>Unique name of the gift. This name can be used in <c>https://t.me/nft/...</c> links and story areas.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Name { get; set; } = default!;
 

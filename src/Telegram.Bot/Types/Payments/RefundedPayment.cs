@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types.Payments;
 /// <summary>This object contains basic information about a refunded payment.</summary>
 public partial class RefundedPayment
 {
-    /// <summary>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code, or “XTR” for payments in <a href="https://t.me/BotNews/90">Telegram Stars</a>. Currently, always “XTR”</summary>
+    /// <summary>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code, or “XTR” for payments in <a href="https://t.me/BotNews/90">Telegram Stars</a>. Currently, always “XTR”.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Currency { get; set; } = default!;
 

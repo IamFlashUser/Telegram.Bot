@@ -42,7 +42,7 @@ public partial class InlineKeyboardButton : IKeyboardButton
     [JsonPropertyName("switch_inline_query_chosen_chat")]
     public SwitchInlineQueryChosenChat? SwitchInlineQueryChosenChat { get; set; }
 
-    /// <summary><em>Optional</em>. Description of the button that copies the specified text to the clipboard.</summary>
+    /// <summary><em>Optional</em>. Description of the button that copies the specified text to the clipboard</summary>
     [JsonPropertyName("copy_text")]
     public CopyTextButton? CopyText { get; set; }
 
@@ -121,15 +121,15 @@ public partial class InlineKeyboardButton : IKeyboardButton
     public static InlineKeyboardButton WithSwitchInlineQueryChosenChat(string text, SwitchInlineQueryChosenChat switchInlineQueryChosenChat) =>
         new(text) { SwitchInlineQueryChosenChat = switchInlineQueryChosenChat };
 
-    /// <summary>Creates an inline keyboard button with description of the button that copies the specified text to the clipboard.</summary>
+    /// <summary>Creates an inline keyboard button with description of the button that copies the specified text to the clipboard</summary>
     /// <param name="text">Label text on the button</param>
-    /// <param name="copyText">Description of the button that copies the specified text to the clipboard.</param>
+    /// <param name="copyText">Description of the button that copies the specified text to the clipboard</param>
     [SetsRequiredMembers]
     public InlineKeyboardButton(string text, CopyTextButton copyText) { Text = text; CopyText = copyText; }
 
-    /// <summary>Creates an inline keyboard button with description of the button that copies the specified text to the clipboard.</summary>
+    /// <summary>Creates an inline keyboard button with description of the button that copies the specified text to the clipboard</summary>
     /// <param name="text">Label text on the button</param>
-    /// <param name="copyText">Description of the button that copies the specified text to the clipboard.</param>
+    /// <param name="copyText">Description of the button that copies the specified text to the clipboard</param>
     public static InlineKeyboardButton WithCopyText(string text, CopyTextButton copyText) =>
         new(text) { CopyText = copyText };
 

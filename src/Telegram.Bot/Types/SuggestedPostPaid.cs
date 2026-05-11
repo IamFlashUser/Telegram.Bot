@@ -8,7 +8,7 @@ public partial class SuggestedPostPaid
     [JsonPropertyName("suggested_post_message")]
     public Message? SuggestedPostMessage { get; set; }
 
-    /// <summary>Currency in which the payment was made. Currently, one of “XTR” for Telegram Stars or “TON” for toncoins</summary>
+    /// <summary>Currency in which the payment was made. Currently, one of “XTR” for Telegram Stars or “TON” for toncoins.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Currency { get; set; } = default!;
 

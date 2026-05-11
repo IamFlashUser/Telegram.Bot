@@ -27,7 +27,7 @@ public partial class EditChatInviteLinkRequest() : RequestBase<ChatInviteLink>("
     [JsonPropertyName("member_limit")]
     public int? MemberLimit { get; set; }
 
-    /// <summary><see langword="true"/>, if users joining the chat via the link need to be approved by chat administrators. If <see langword="true"/>, <see cref="MemberLimit">MemberLimit</see> can't be specified</summary>
+    /// <summary><see langword="true"/>, if users joining the chat via the link need to be approved by chat administrators. If <see langword="true"/>, <see cref="MemberLimit">MemberLimit</see> can't be specified.</summary>
     [JsonPropertyName("creates_join_request")]
     public bool CreatesJoinRequest { get; set; }
 }

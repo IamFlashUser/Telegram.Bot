@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types.ReplyMarkups;
 /// <summary>This object defines the parameters for the creation of a managed bot. Information about the created bot will be shared with the bot using the update <em>ManagedBot</em> and a <see cref="Message"/> with the field <em>ManagedBotCreated</em>.</summary>
 public partial class KeyboardButtonRequestManagedBot
 {
-    /// <summary>Signed 32-bit identifier of the request. Must be unique within the message</summary>
+    /// <summary>Signed 32-bit identifier of the request. Must be unique within the message.</summary>
     [JsonPropertyName("request_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int RequestId { get; set; }
@@ -18,7 +18,7 @@ public partial class KeyboardButtonRequestManagedBot
     public string? SuggestedUsername { get; set; }
 
     /// <summary>Initializes an instance of <see cref="KeyboardButtonRequestManagedBot"/></summary>
-    /// <param name="requestId">Signed 32-bit identifier of the request. Must be unique within the message</param>
+    /// <param name="requestId">Signed 32-bit identifier of the request. Must be unique within the message.</param>
     [SetsRequiredMembers]
     public KeyboardButtonRequestManagedBot(int requestId) => RequestId = requestId;
 

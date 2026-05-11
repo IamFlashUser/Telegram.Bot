@@ -11,7 +11,7 @@ public partial class AnswerCallbackQueryRequest() : RequestBase<bool>("answerCal
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string CallbackQueryId { get; set; }
 
-    /// <summary>Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters</summary>
+    /// <summary>Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters.</summary>
     public string? Text { get; set; }
 
     /// <summary>If <see langword="true"/>, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to <see langword="false"/>.</summary>

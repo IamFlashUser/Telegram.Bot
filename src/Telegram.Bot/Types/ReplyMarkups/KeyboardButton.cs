@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types.ReplyMarkups;
 /// <summary>This object represents one button of the reply keyboard. At most one of the fields other than <see cref="Text">Text</see>, <see cref="IconCustomEmojiId">IconCustomEmojiId</see>, and <see cref="Style">Style</see> must be used to specify the type of the button. For simple text buttons, <em>String</em> can be used instead of this object to specify the button text.</summary>
 public partial class KeyboardButton : IKeyboardButton
 {
-    /// <summary>Text of the button. If none of the fields other than <see cref="Text">Text</see>, <see cref="IconCustomEmojiId">IconCustomEmojiId</see>, and <see cref="Style">Style</see> are used, it will be sent as a message when the button is pressed</summary>
+    /// <summary>Text of the button. If none of the fields other than <see cref="Text">Text</see>, <see cref="IconCustomEmojiId">IconCustomEmojiId</see>, and <see cref="Style">Style</see> are used, it will be sent as a message when the button is pressed.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string Text { get; set; }
 
@@ -44,7 +44,7 @@ public partial class KeyboardButton : IKeyboardButton
     public WebAppInfo? WebApp { get; set; }
 
     /// <summary>Initializes an instance of <see cref="KeyboardButton"/></summary>
-    /// <param name="text">Text of the button. If none of the fields other than <see cref="Text">Text</see>, <see cref="IconCustomEmojiId">IconCustomEmojiId</see>, and <see cref="Style">Style</see> are used, it will be sent as a message when the button is pressed</param>
+    /// <param name="text">Text of the button. If none of the fields other than <see cref="Text">Text</see>, <see cref="IconCustomEmojiId">IconCustomEmojiId</see>, and <see cref="Style">Style</see> are used, it will be sent as a message when the button is pressed.</param>
     [SetsRequiredMembers]
     public KeyboardButton(string text) => Text = text;
 

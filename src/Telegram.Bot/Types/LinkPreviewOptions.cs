@@ -8,7 +8,7 @@ public partial class LinkPreviewOptions
     [JsonPropertyName("is_disabled")]
     public bool IsDisabled { get; set; }
 
-    /// <summary><em>Optional</em>. URL to use for the link preview. If empty, then the first URL found in the message text will be used</summary>
+    /// <summary><em>Optional</em>. URL to use for the link preview. If empty, then the first URL found in the message text will be used.</summary>
     public string? Url { get; set; }
 
     /// <summary><em>Optional</em>. <see langword="true"/>, if the media in the link preview is supposed to be shrunk; ignored if the URL isn't explicitly specified or media size change isn't supported for the preview</summary>

@@ -10,7 +10,7 @@ public partial class DeleteBusinessMessagesRequest() : RequestBase<bool>("delete
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string BusinessConnectionId { get; set; }
 
-    /// <summary>A list of 1-100 identifiers of messages to delete. All messages must be from the same chat. See <see cref="TelegramBotClientExtensions.DeleteMessage">DeleteMessage</see> for limitations on which messages can be deleted</summary>
+    /// <summary>A list of 1-100 identifiers of messages to delete. All messages must be from the same chat. See <see cref="TelegramBotClientExtensions.DeleteMessage">DeleteMessage</see> for limitations on which messages can be deleted.</summary>
     [JsonPropertyName("message_ids")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required IEnumerable<int> MessageIds { get; set; }

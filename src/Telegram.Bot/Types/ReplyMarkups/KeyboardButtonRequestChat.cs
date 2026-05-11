@@ -4,12 +4,12 @@ namespace Telegram.Bot.Types.ReplyMarkups;
 /// <summary>This object defines the criteria used to request a suitable chat. Information about the selected chat will be shared with the bot when the corresponding button is pressed. The bot will be granted requested rights in the chat if appropriate. <a href="https://core.telegram.org/bots/features#chat-and-user-selection">More about requesting chats »</a>.</summary>
 public partial class KeyboardButtonRequestChat
 {
-    /// <summary>Signed 32-bit identifier of the request, which will be received back in the <see cref="ChatShared"/> object. Must be unique within the message</summary>
+    /// <summary>Signed 32-bit identifier of the request, which will be received back in the <see cref="ChatShared"/> object. Must be unique within the message.</summary>
     [JsonPropertyName("request_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int RequestId { get; set; }
 
-    /// <summary>Pass <see langword="true"/> to request a channel chat, pass <see langword="false"/> to request a group or a supergroup chat.</summary>
+    /// <summary>Pass <see langword="true"/> to request a channel chat, pass <see langword="false"/> to request a group or a supergroup chat</summary>
     [JsonPropertyName("chat_is_channel")]
     public required bool ChatIsChannel { get; set; }
 
@@ -50,8 +50,8 @@ public partial class KeyboardButtonRequestChat
     public bool RequestPhoto { get; set; }
 
     /// <summary>Initializes an instance of <see cref="KeyboardButtonRequestChat"/></summary>
-    /// <param name="requestId">Signed 32-bit identifier of the request, which will be received back in the <see cref="ChatShared"/> object. Must be unique within the message</param>
-    /// <param name="chatIsChannel">Pass <see langword="true"/> to request a channel chat, pass <see langword="false"/> to request a group or a supergroup chat.</param>
+    /// <param name="requestId">Signed 32-bit identifier of the request, which will be received back in the <see cref="ChatShared"/> object. Must be unique within the message.</param>
+    /// <param name="chatIsChannel">Pass <see langword="true"/> to request a channel chat, pass <see langword="false"/> to request a group or a supergroup chat</param>
     [SetsRequiredMembers]
     public KeyboardButtonRequestChat(int requestId, bool chatIsChannel)
     {

@@ -22,7 +22,7 @@ public partial class ChatJoinRequest
     [JsonConverter(typeof(UnixDateTimeConverter))]
     public DateTime Date { get; set; }
 
-    /// <summary><em>Optional</em>. Bio of the user.</summary>
+    /// <summary><em>Optional</em>. Bio of the user</summary>
     public string? Bio { get; set; }
 
     /// <summary><em>Optional</em>. Chat invite link that was used by the user to send the join request</summary>

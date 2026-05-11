@@ -94,7 +94,7 @@ public partial class InlineQueryResultPhoto : InlineQueryResult
     /// <summary>Type of the result, always <see cref="InlineQueryResultType.Photo"/></summary>
     public override InlineQueryResultType Type => InlineQueryResultType.Photo;
 
-    /// <summary>A valid URL of the photo. Photo must be in <b>JPEG</b> format. Photo size must not exceed 5MB</summary>
+    /// <summary>A valid URL of the photo. Photo must be in <b>JPEG</b> format. Photo size must not exceed 5MB.</summary>
     [JsonPropertyName("photo_url")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string PhotoUrl { get; set; }
@@ -139,7 +139,7 @@ public partial class InlineQueryResultPhoto : InlineQueryResult
 
     /// <summary>Initializes an instance of <see cref="InlineQueryResultPhoto"/></summary>
     /// <param name="id">Unique identifier for this result, 1-64 bytes</param>
-    /// <param name="photoUrl">A valid URL of the photo. Photo must be in <b>JPEG</b> format. Photo size must not exceed 5MB</param>
+    /// <param name="photoUrl">A valid URL of the photo. Photo must be in <b>JPEG</b> format. Photo size must not exceed 5MB.</param>
     /// <param name="thumbnailUrl">URL of the thumbnail for the photo</param>
     [SetsRequiredMembers]
     public InlineQueryResultPhoto(string id, string photoUrl, string thumbnailUrl) : base(id)
@@ -180,7 +180,7 @@ public partial class InlineQueryResultGif : InlineQueryResult
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string ThumbnailUrl { get; set; }
 
-    /// <summary><em>Optional</em>. MIME type of the thumbnail, must be one of “image/jpeg”, “image/gif”, or “video/mp4”. Defaults to “image/jpeg”</summary>
+    /// <summary><em>Optional</em>. MIME type of the thumbnail, must be one of “image/jpeg”, “image/gif”, or “video/mp4”. Defaults to “image/jpeg”.</summary>
     [JsonPropertyName("thumbnail_mime_type")]
     public string? ThumbnailMimeType { get; set; }
 
@@ -249,7 +249,7 @@ public partial class InlineQueryResultMpeg4Gif : InlineQueryResult
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string ThumbnailUrl { get; set; }
 
-    /// <summary><em>Optional</em>. MIME type of the thumbnail, must be one of “image/jpeg”, “image/gif”, or “video/mp4”. Defaults to “image/jpeg”</summary>
+    /// <summary><em>Optional</em>. MIME type of the thumbnail, must be one of “image/jpeg”, “image/gif”, or “video/mp4”. Defaults to “image/jpeg”.</summary>
     [JsonPropertyName("thumbnail_mime_type")]
     public string? ThumbnailMimeType { get; set; }
 
@@ -560,7 +560,7 @@ public partial class InlineQueryResultLocation : InlineQueryResult
     [JsonPropertyName("horizontal_accuracy")]
     public double? HorizontalAccuracy { get; set; }
 
-    /// <summary><em>Optional</em>. Period in seconds during which the location can be updated, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely.</summary>
+    /// <summary><em>Optional</em>. Period in seconds during which the location can be updated, must be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely</summary>
     [JsonPropertyName("live_period")]
     public int? LivePeriod { get; set; }
 

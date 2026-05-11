@@ -45,6 +45,6 @@ public partial class GetBusinessAccountGiftsRequest() : RequestBase<OwnedGifts>(
     /// <summary>Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results</summary>
     public string? Offset { get; set; }
 
-    /// <summary>The maximum number of gifts to be returned; 1-100. Defaults to 100</summary>
+    /// <summary>The maximum number of gifts to be returned; 1-100. Defaults to 100.</summary>
     public int? Limit { get; set; }
 }

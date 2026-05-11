@@ -9,6 +9,6 @@ public partial class DirectMessagesTopic
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public long TopicId { get; set; }
 
-    /// <summary><em>Optional</em>. Information about the user that created the topic. Currently, it is always present</summary>
+    /// <summary><em>Optional</em>. Information about the user that created the topic. Currently, it is always present.</summary>
     public User? User { get; set; }
 }

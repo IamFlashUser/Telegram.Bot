@@ -15,7 +15,7 @@ public partial class ApproveSuggestedPostRequest() : RequestBase<bool>("approveS
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required int MessageId { get; set; }
 
-    /// <summary>Point in time when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future</summary>
+    /// <summary>Point in time when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future.</summary>
     [JsonPropertyName("send_date")]
     [JsonConverter(typeof(UnixDateTimeConverter))]
     public DateTime? SendDate { get; set; }

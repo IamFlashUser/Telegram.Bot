@@ -9,7 +9,7 @@ public partial class UsersShared
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public int RequestId { get; set; }
 
-    /// <summary>Information about users shared with the bot.</summary>
+    /// <summary>Information about users shared with the bot</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public SharedUser[] Users { get; set; } = default!;
 }

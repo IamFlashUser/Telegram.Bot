@@ -14,10 +14,10 @@ public partial class ChatShared
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public long ChatId { get; set; }
 
-    /// <summary><em>Optional</em>. Title of the chat, if the title was requested by the bot.</summary>
+    /// <summary><em>Optional</em>. Title of the chat, if the title was requested by the bot</summary>
     public string? Title { get; set; }
 
-    /// <summary><em>Optional</em>. Username of the chat, if the username was requested by the bot and available.</summary>
+    /// <summary><em>Optional</em>. Username of the chat, if the username was requested by the bot and available</summary>
     public string? Username { get; set; }
 
     /// <summary><em>Optional</em>. Available sizes of the chat photo, if the photo was requested by the bot</summary>

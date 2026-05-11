@@ -71,7 +71,7 @@ public partial class OwnedGiftRegular : OwnedGift
     [JsonPropertyName("is_upgrade_separate")]
     public bool IsUpgradeSeparate { get; set; }
 
-    /// <summary><em>Optional</em>. Unique number reserved for this gift when upgraded. See the <em>number</em> field in <see cref="UniqueGift"/></summary>
+    /// <summary><em>Optional</em>. Unique number reserved for this gift when upgraded. See the <em>number</em> field in <see cref="UniqueGift"/>.</summary>
     [JsonPropertyName("unique_gift_number")]
     public int? UniqueGiftNumber { get; set; }
 }
@@ -94,7 +94,7 @@ public partial class OwnedGiftUnique : OwnedGift
     [JsonPropertyName("transfer_star_count")]
     public long? TransferStarCount { get; set; }
 
-    /// <summary><em>Optional</em>. Point in time when the gift can be transferred. If it is in the past, then the gift can be transferred now</summary>
+    /// <summary><em>Optional</em>. Point in time when the gift can be transferred. If it is in the past, then the gift can be transferred now.</summary>
     [JsonPropertyName("next_transfer_date")]
     [JsonConverter(typeof(UnixDateTimeConverter))]
     public DateTime? NextTransferDate { get; set; }

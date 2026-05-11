@@ -54,7 +54,7 @@ public partial class InputLocationMessageContent : InputMessageContent
     [JsonPropertyName("horizontal_accuracy")]
     public double? HorizontalAccuracy { get; set; }
 
-    /// <summary><em>Optional</em>. Period in seconds during which the location can be updated, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely.</summary>
+    /// <summary><em>Optional</em>. Period in seconds during which the location can be updated, must be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely</summary>
     [JsonPropertyName("live_period")]
     public int? LivePeriod { get; set; }
 

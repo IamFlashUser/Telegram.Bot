@@ -11,7 +11,7 @@ public partial class GetInlineGameHighScoresRequest() : RequestBase<GameHighScor
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required long UserId { get; set; }
 
-    /// <summary>Identifier of the inline message</summary>
+    /// <summary>Identifier of the inline message.</summary>
     [JsonPropertyName("inline_message_id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string InlineMessageId { get; set; }

@@ -13,7 +13,7 @@ public partial class OwnedGifts
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public OwnedGift[] Gifts { get; set; } = default!;
 
-    /// <summary><em>Optional</em>. Offset for the next request. If empty, then there are no more results</summary>
+    /// <summary><em>Optional</em>. Offset for the next request. If empty, then there are no more results.</summary>
     [JsonPropertyName("next_offset")]
     public string? NextOffset { get; set; }
 }

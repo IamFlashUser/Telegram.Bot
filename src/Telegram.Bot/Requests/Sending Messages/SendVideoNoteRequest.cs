@@ -10,7 +10,7 @@ public partial class SendVideoNoteRequest() : FileRequestBase<Message>("sendVide
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required ChatId ChatId { get; set; }
 
-    /// <summary>Video note to send. Pass a FileId as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using <see cref="InputFileStream"/>. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a>. Sending video notes by a URL is currently unsupported</summary>
+    /// <summary>Video note to send. Pass a FileId as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using <see cref="InputFileStream"/>. <a href="https://core.telegram.org/bots/api#sending-files">More information on Sending Files »</a>. Sending video notes by a URL is currently unsupported.</summary>
     [JsonPropertyName("video_note")]
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required InputFile VideoNote { get; set; }
@@ -60,7 +60,7 @@ public partial class SendVideoNoteRequest() : FileRequestBase<Message>("sendVide
     [JsonPropertyName("reply_parameters")]
     public ReplyParameters? ReplyParameters { get; set; }
 
-    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user</summary>
+    /// <summary>Additional interface options. An object for an <a href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user.</summary>
     [JsonPropertyName("reply_markup")]
     public ReplyMarkup? ReplyMarkup { get; set; }
 }

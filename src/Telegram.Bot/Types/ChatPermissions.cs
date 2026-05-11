@@ -52,7 +52,7 @@ public partial class ChatPermissions
     [JsonPropertyName("can_edit_tag")]
     public bool? CanEditTag { get; set; }
 
-    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to change the chat title, photo and other settings. Ignored in public supergroups</summary>
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to change the chat title, photo and other settings. Ignored in public supergroups.</summary>
     [JsonPropertyName("can_change_info")]
     public bool CanChangeInfo { get; set; }
 
@@ -60,11 +60,11 @@ public partial class ChatPermissions
     [JsonPropertyName("can_invite_users")]
     public bool CanInviteUsers { get; set; }
 
-    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to pin messages. Ignored in public supergroups</summary>
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to pin messages. Ignored in public supergroups.</summary>
     [JsonPropertyName("can_pin_messages")]
     public bool CanPinMessages { get; set; }
 
-    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to create forum topics. If omitted defaults to the value of <see cref="CanPinMessages">CanPinMessages</see></summary>
+    /// <summary><em>Optional</em>. <see langword="true"/>, if the user is allowed to create forum topics. If omitted defaults to the value of <see cref="CanPinMessages">CanPinMessages</see>.</summary>
     [JsonPropertyName("can_manage_topics")]
     public bool? CanManageTopics { get; set; }
 }

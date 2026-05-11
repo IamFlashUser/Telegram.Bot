@@ -4,7 +4,7 @@ namespace Telegram.Bot.Types;
 /// <summary>This object represents an inline button that switches the current user to inline mode in a chosen chat, with an optional default inline query.</summary>
 public partial class SwitchInlineQueryChosenChat
 {
-    /// <summary><em>Optional</em>. The default inline query to be inserted in the input field. If left empty, only the bot's username will be inserted</summary>
+    /// <summary><em>Optional</em>. The default inline query to be inserted in the input field. If left empty, only the bot's username will be inserted.</summary>
     public string? Query { get; set; }
 
     /// <summary><em>Optional</em>. <see langword="true"/>, if private chats with users can be chosen</summary>

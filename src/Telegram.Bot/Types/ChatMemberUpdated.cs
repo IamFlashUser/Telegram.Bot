@@ -27,7 +27,7 @@ public partial class ChatMemberUpdated
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public ChatMember NewChatMember { get; set; } = default!;
 
-    /// <summary><em>Optional</em>. Chat invite link, which was used by the user to join the chat; for joining by invite link events only.</summary>
+    /// <summary><em>Optional</em>. Chat invite link, which was used by the user to join the chat; for joining by invite link events only</summary>
     [JsonPropertyName("invite_link")]
     public ChatInviteLink? InviteLink { get; set; }
 

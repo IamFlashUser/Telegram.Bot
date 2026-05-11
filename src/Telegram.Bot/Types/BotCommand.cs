@@ -8,7 +8,7 @@ public partial class BotCommand
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Command { get; set; } = default!;
 
-    /// <summary>Description of the command; 1-256 characters.</summary>
+    /// <summary>Description of the command; 1-256 characters</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public string Description { get; set; } = default!;
 }

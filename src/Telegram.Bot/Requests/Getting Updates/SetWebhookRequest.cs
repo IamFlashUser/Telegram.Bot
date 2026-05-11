@@ -6,7 +6,7 @@ namespace Telegram.Bot.Requests;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public partial class SetWebhookRequest() : FileRequestBase<bool>("setWebhook")
 {
-    /// <summary>HTTPS URL to send updates to. Use an empty string to remove webhook integration</summary>
+    /// <summary>HTTPS URL to send updates to. Use an empty string to remove webhook integration.</summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
     public required string Url { get; set; }
 

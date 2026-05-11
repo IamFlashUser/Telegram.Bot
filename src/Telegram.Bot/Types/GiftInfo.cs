@@ -38,7 +38,7 @@ public partial class GiftInfo
     [JsonPropertyName("is_private")]
     public bool IsPrivate { get; set; }
 
-    /// <summary><em>Optional</em>. Unique number reserved for this gift when upgraded. See the <em>number</em> field in <see cref="UniqueGift"/></summary>
+    /// <summary><em>Optional</em>. Unique number reserved for this gift when upgraded. See the <em>number</em> field in <see cref="UniqueGift"/>.</summary>
     [JsonPropertyName("unique_gift_number")]
     public int? UniqueGiftNumber { get; set; }
 }

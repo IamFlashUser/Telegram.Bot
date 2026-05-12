@@ -1374,8 +1374,8 @@ public static partial class TelegramBotClientExtensions
     /// <param name="chatId">Unique identifier for the target private chat</param>
     /// <param name="draftId">Unique identifier of the message draft; must be non-zero. Changes of drafts with the same identifier are animated.</param>
     /// <param name="text">Text of the message to be sent, 0-4096 characters after entities parsing. Pass an empty text to show a “Thinking…” placeholder.</param>
-    /// <param name="messageThreadId">Unique identifier for the target message thread</param>
     /// <param name="parseMode">Mode for parsing entities in the message text. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
+    /// <param name="messageThreadId">Unique identifier for the target message thread</param>
     /// <param name="entities">A list of special entities that appear in message text, which can be specified instead of <paramref name="parseMode"/></param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>
     public static async Task SendMessageDraft(
@@ -1383,8 +1383,8 @@ public static partial class TelegramBotClientExtensions
         long chatId,
         int draftId,
         string? text,
-        int? messageThreadId = default,
         ParseMode parseMode = default,
+        int? messageThreadId = default,
         IEnumerable<MessageEntity>? entities = default,
         CancellationToken cancellationToken = default
     ) => await botClient.ThrowIfNull().SendRequest(new SendMessageDraftRequest
@@ -1392,8 +1392,8 @@ public static partial class TelegramBotClientExtensions
         ChatId = chatId,
         DraftId = draftId,
         Text = text,
-        MessageThreadId = messageThreadId,
         ParseMode = parseMode,
+        MessageThreadId = messageThreadId,
         Entities = entities,
     }, cancellationToken).ConfigureAwait(false);
 

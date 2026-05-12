@@ -2462,7 +2462,7 @@ public static partial class TelegramBotClientExtensions
         this ITelegramBotClient botClient,
         long userId,
         bool isAccessRestricted,
-        IEnumerable<int>? addedUserIds = default,
+        IEnumerable<long>? addedUserIds = default,
         CancellationToken cancellationToken = default
     ) => await botClient.ThrowIfNull().SendRequest(new SetManagedBotAccessSettingsRequest
     {

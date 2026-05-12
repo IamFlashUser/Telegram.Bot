@@ -16,5 +16,5 @@ public partial class SetManagedBotAccessSettingsRequest() : RequestBase<bool>("s
 
     /// <summary>A list of up to 10 identifiers of users who will have access to the bot in addition to its owner. Ignored if <see cref="IsAccessRestricted">IsAccessRestricted</see> is false.</summary>
     [JsonPropertyName("added_user_ids")]
-    public IEnumerable<int>? AddedUserIds { get; set; }
+    public IEnumerable<long>? AddedUserIds { get; set; }
 }

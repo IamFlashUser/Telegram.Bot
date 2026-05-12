@@ -5,13 +5,16 @@ on:
     branches: [ master ]
     paths-ignore: [ '.**', 'docs/**', '**.md' ]
   workflow_dispatch:
+    inputs:
+      release_notes:
+        description: 'Release notes'
 
 env:
   PROJECT_PATH: src/Telegram.Bot/Telegram.Bot.csproj
   UNITTEST_PATH: test/Telegram.Bot.Tests.Unit/Telegram.Bot.Tests.Unit.csproj
   CONFIGURATION: Release
   PACKAGES_PATH: src/Telegram.Bot/bin/Release
-  RELEASE_NOTES: ${{ github.event.head_commit.message }}
+  RELEASE_NOTES: ${{ inputs.release_notes || github.event.head_commit.message }}
 
 jobs:
   build:

@@ -1191,10 +1191,10 @@ public static partial class TelegramBotClientExtensions
     /// <param name="explanationMedia">Media added to the quiz explanation</param>
     /// <param name="questionParseMode">Mode for parsing entities in the question. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details. Currently, only custom emoji entities are allowed.</param>
     /// <param name="questionEntities">A list of special entities that appear in the poll question. It can be specified instead of <paramref name="questionParseMode"/>.</param>
-    /// <param name="media">Media added to the poll description</param>
     /// <param name="description">Description of the poll to be sent, 0-1024 characters after entities parsing</param>
     /// <param name="descriptionParseMode">Mode for parsing entities in the poll description. See <a href="https://core.telegram.org/bots/api#formatting-options">formatting options</a> for more details.</param>
     /// <param name="descriptionEntities">A list of special entities that appear in the poll description, which can be specified instead of <paramref name="descriptionParseMode"/></param>
+    /// <param name="media">Media added to the poll description</param>
     /// <param name="openPeriod">Amount of time in seconds the poll will be active after creation, 5-2628000. Can't be used together with <paramref name="closeDate"/>.</param>
     /// <param name="closeDate">Point in time when the poll will be automatically closed. Must be at least 5 and no more than 2628000 seconds in the future. Can't be used together with <paramref name="openPeriod"/>.</param>
     /// <param name="isClosed">Pass <see langword="true"/> if the poll needs to be immediately closed. This can be useful for poll preview.</param>
@@ -1229,10 +1229,10 @@ public static partial class TelegramBotClientExtensions
         InputPollMedia? explanationMedia = default,
         ParseMode questionParseMode = default,
         IEnumerable<MessageEntity>? questionEntities = default,
-        InputPollMedia? media = default,
         string? description = default,
         ParseMode descriptionParseMode = default,
         IEnumerable<MessageEntity>? descriptionEntities = default,
+        InputPollMedia? media = default,
         int? openPeriod = default,
         DateTime? closeDate = default,
         bool isClosed = default,
@@ -1266,10 +1266,10 @@ public static partial class TelegramBotClientExtensions
         ExplanationMedia = explanationMedia,
         QuestionParseMode = questionParseMode,
         QuestionEntities = questionEntities,
-        Media = media,
         Description = description,
         DescriptionParseMode = descriptionParseMode,
         DescriptionEntities = descriptionEntities,
+        Media = media,
         OpenPeriod = openPeriod,
         CloseDate = closeDate,
         IsClosed = isClosed,
@@ -1400,7 +1400,7 @@ public static partial class TelegramBotClientExtensions
     /// <summary>Use this method when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less (when a message arrives from your bot, Telegram clients clear its typing status).<br/>We only recommend using this method when a response from the bot will take a <b>noticeable</b> amount of time to arrive.</summary>
     /// <remarks>Example: The <a href="https://t.me/imagebot">ImageBot</a> needs some time to process a request and upload the image. Instead of sending a text message along the lines of “Retrieving image, please wait…”, the bot may use <see cref="TelegramBotClientExtensions.SendChatAction">SendChatAction</see> with <paramref name="action"/> = <em>UploadPhoto</em>. The user will see a “sending photo” status for the bot.</remarks>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="chatId">Unique identifier for the target chat or username of the target bot, supergroup or channel in the format <c>@username</c>. Channel chats and channel direct messages chats aren't supported.</param>
+    /// <param name="chatId">Unique identifier for the target chat or username of the target bot or supergroup in the format <c>@username</c>. Channel chats and channel direct messages chats aren't supported.</param>
     /// <param name="action">Type of action to broadcast. Choose one, depending on what the user is about to receive: <em>typing</em> for <see cref="TelegramBotClientExtensions.SendMessage">text messages</see>, <em>UploadPhoto</em> for <see cref="TelegramBotClientExtensions.SendPhoto">photos</see>, <em>RecordVideo</em> or <em>UploadVideo</em> for <see cref="TelegramBotClientExtensions.SendVideo">videos</see>, <em>RecordVoice</em> or <em>UploadVoice</em> for <see cref="TelegramBotClientExtensions.SendVoice">voice notes</see>, <em>UploadDocument</em> for <see cref="TelegramBotClientExtensions.SendDocument">general files</see>, <em>ChooseSticker</em> for <see cref="TelegramBotClientExtensions.SendSticker">stickers</see>, <em>FindLocation</em> for <see cref="TelegramBotClientExtensions.SendLocation">location data</see>, <em>RecordVideoNote</em> or <em>UploadVideoNote</em> for <see cref="TelegramBotClientExtensions.SendVideoNote">video notes</see>.</param>
     /// <param name="messageThreadId">Unique identifier for the target message thread or topic of a forum; for supergroups and private chats of bots with forum topic mode enabled only</param>
     /// <param name="businessConnectionId">Unique identifier of the business connection on behalf of which the action will be sent</param>
@@ -3823,7 +3823,7 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to remove a reaction from a message in a group or a supergroup chat. The bot must have the 'CanDeleteMessages' administrator right in the chat.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="chatId">Unique identifier for the target chat or username of the target supergroup (in the format <c>@username</c>)</param>
+    /// <param name="chatId">Unique identifier for the target chat or username of the target supergroup in the format <c>@username</c></param>
     /// <param name="messageId">Identifier of the target message</param>
     /// <param name="userId">Identifier of the user whose reaction will be removed, if the reaction was added by a user</param>
     /// <param name="actorChatId">Identifier of the chat whose reaction will be removed, if the reaction was added by a chat</param>
@@ -3845,7 +3845,7 @@ public static partial class TelegramBotClientExtensions
 
     /// <summary>Use this method to remove up to 10000 recent reactions in a group or a supergroup chat added by a given user or chat. The bot must have the 'CanDeleteMessages' administrator right in the chat.</summary>
     /// <param name="botClient">An instance of <see cref="ITelegramBotClient"/></param>
-    /// <param name="chatId">Unique identifier for the target chat or username of the target supergroup (in the format <c>@username</c>)</param>
+    /// <param name="chatId">Unique identifier for the target chat or username of the target supergroup in the format <c>@username</c></param>
     /// <param name="userId">Identifier of the user whose reactions will be removed, if the reactions were added by a user</param>
     /// <param name="actorChatId">Identifier of the chat whose reactions will be removed, if the reactions were added by a chat</param>
     /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation</param>

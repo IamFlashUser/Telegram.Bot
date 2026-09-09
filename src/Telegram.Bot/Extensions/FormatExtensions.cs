@@ -450,6 +450,8 @@ public static class HtmlText
                     if (stream is FileStream fs && Path.GetFileName(fs.Name) is { } filename && span.Equals(filename, StringComparison.OrdinalIgnoreCase))
                         return InputFile.FromStream(stream, filename);
             }
+            else if (urlOrFileId.StartsWith("tg://", StringComparison.OrdinalIgnoreCase) && urlOrFileId.IndexOf("?file_id=", StringComparison.OrdinalIgnoreCase) is int fid && fid > 0)
+                return urlOrFileId[(fid + 9)..].ToString();
             return urlOrFileId.ToString();
         }
     }
